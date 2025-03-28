@@ -2,8 +2,6 @@
 import React, { use, useEffect, useState } from "react";
 import Link from "next/link";
 import Container from "@/components/ui/container";
-import BackgroundSlider from "@/components/BackgroundSilder";
-import BoxImg from "@/components/ImageGox";
 import { useTranslations } from "next-intl";
 export default function GalleryPage() {
   const imagesSlider: string[] = [
@@ -44,7 +42,6 @@ export default function GalleryPage() {
 
   return (
     <Container>
-      <BackgroundSlider images={imagesSlider} maxHeight={"500px"} />
       <div>
         <div className="flex flex-col items-center relative min-h-[500px] justify-center">
           <h2 className="text-[6rem] font-semibold uppercase">{t("title")}</h2>
@@ -60,11 +57,7 @@ export default function GalleryPage() {
             </span>
           </h3>
         </div>
-        <section className="grid grid-cols-3 gap-5 my-10 max-lg:flex max-lg:flex-col max-lg:items-center">
-          {images.map((imageUrl, index) => (
-            <BoxImg key={index} src={imageUrl} alt={`Image ${index + 1}`} />
-          ))}
-        </section>
+        <section className="grid grid-cols-3 gap-5 my-10 max-lg:flex max-lg:flex-col max-lg:items-center"></section>
       </div>
     </Container>
   );

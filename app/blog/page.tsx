@@ -1,29 +1,16 @@
 import BlogTable from "@/components/BlogTable";
+import Button from "@/components/ui/button";
 import Container from "@/components/ui/container";
 
-// Funkcja do generowania metadanych SEO
-
-// Pobieranie początkowych postów z API
-const fetchPosts = async (lang: string, page: number, limit: number) => {
-  try {
-    const res = await fetch(`http://localhost:3000/api/blog`);
-    if (!res.ok) {
-      throw new Error("Failed to fetch posts");
-    }
-    const data = await res.json();
-    return data.posts;
-  } catch {
-    console.error("Błąd podczas pobierania postów:");
-    return [];
-  }
-};
-
 const BlogPageContainer = async ({ params }: { params: any }) => {
-  const data = await params;
-  const posts = await fetchPosts(data.locale, 1, 5);
-
   return (
-    <Container>{!!posts?.length && <BlogTable posts={posts} />}</Container>
+    <Container>
+      <div className="p-10 flex flex-row text-center algin-center justify-center gap-10">
+        <h2 className="text-[2rem] flex items-end">Lista artykół na blogu</h2>
+        <Button title="Nowy artykół" href="/blog/new" />
+      </div>
+      {<BlogTable />}
+    </Container>
   );
 };
 

@@ -17,6 +17,9 @@ interface BlogPost {
   pl_slug: BlogContent | null;
   en_slug: BlogContent | null;
   de_slug: BlogContent | null;
+  pl_title: BlogContent | null;
+  en_title: BlogContent | null;
+  de_title: BlogContent | null;
 }
 
 export async function GET(req: NextRequest) {
@@ -36,10 +39,7 @@ export async function GET(req: NextRequest) {
         translations: {},
       },
     });
-    console.log(
-      "########################################################################",
-      posts
-    );
+
     // If no posts found
     if (posts.length === 0) {
       return new Response(
@@ -59,6 +59,9 @@ export async function GET(req: NextRequest) {
         pl_slug: null,
         en_slug: null,
         de_slug: null,
+        pl_title: null,
+        en_title: null,
+        de_title: null,
       };
 
       post.translations.forEach((langContent: any) => {
@@ -71,10 +74,13 @@ export async function GET(req: NextRequest) {
 
         if (langContent.lang === "pl") {
           blogPost.pl_slug = content?.slug;
+          blogPost.pl_title = content?.title;
         } else if (langContent.lang === "en") {
           blogPost.en_slug = content?.slug;
+          blogPost.en_title = content?.title;
         } else if (langContent.lang === "de") {
           blogPost.de_slug = content?.slug;
+          blogPost.de_title = content?.title;
         }
       });
 
@@ -102,6 +108,47 @@ export async function GET(req: NextRequest) {
   } catch (error) {
     console.error(error);
     return new Response(JSON.stringify({ error: "Error fetching posts" }), {
+      status: 500,
+    });
+  } finally {
+    // Always disconnect the Prisma Client
+    await prisma.$disconnect();
+  }
+}
+
+export async function DELETE(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const postId = searchParams.get("id");
+
+  if (!postId) {
+    return new Response(JSON.stringify({ error: "Post ID is required" }), {
+      status: 400,
+    });
+  }
+
+  try {
+    const post = await prisma.blog.delete({
+      where: {
+        id: parseInt(postId, 10),
+      },
+    });
+
+    if (!post) {
+      return new Response(JSON.stringify({ error: "Post not found" }), {
+        status: 404,
+      });
+    }
+
+    return new Response(
+      JSON.stringify({ message: "Post deleted successfully" }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+  } catch (error) {
+    console.error(error);
+    return new Response(JSON.stringify({ error: "Error deleting post" }), {
       status: 500,
     });
   } finally {

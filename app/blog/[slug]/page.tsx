@@ -1,4 +1,3 @@
-import ArticleBox from "@/components/ArticleBox";
 import Container from "@/components/ui/container";
 import { generateMetadata } from "./metadata";
 
@@ -23,7 +22,7 @@ const ArticlePageContainer = async ({ params }: { params: any }) => {
 
   return (
     <Container>
-      <ArticleBox article={article} />
+      <></>
     </Container>
   );
 };
