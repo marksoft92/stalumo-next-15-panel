@@ -1,0 +1,162 @@
+{
+  "HomePage": {
+    "AboutUs": {
+      "title": "Welding craftsmanship forging excellence",
+      "subTitle": "ABOUT US",
+      "description": "We are a team of specialists characterized not only by the ability to weld perfectly but also by a deep passion for creation. Our experience, built on a decade of practice, allows us to boldly walk the path of excellence.<br/><br/> Every project is a challenge that we take on with determination to provide our clients not only with a product of the highest quality but also with satisfaction and the confidence that their expectations have been exceeded.",
+      "button": "More about us",
+      "count": "Completed Projects"
+    },
+    "Excellence": {
+      "title": "Steel structures across Germany and Poland",
+      "subTitle": "Perfect execution",
+      "description": "Our work is not just about flawless execution; it's also about passion and dedication that always lead to excellence. We create steel structures in Poland and every region of Germany.",
+      "button": "Request a free quote"
+    },
+    "Faq": {
+      "title": "WHAT YOU SHOULD KNOW",
+      "question1": "Can you design railings and fences tailored to my individual needs?",
+      "answer1": "Of course! Our design team specializes in creating custom solutions that perfectly match your requirements and preferences. Whether you need a railing with an unusual shape or a uniquely patterned fence, we are ready to bring your ideas to life.",
+      "question2": "Can I get advice on choosing the right solution for my space?",
+      "answer2": "Absolutely! Our team of specialists provides expert advice at every stage of the process. From the first contact to the final installation, we are here to answer your questions, share our knowledge, and help you choose the best solution for your home or garden.",
+      "question3": "Do you offer installation services?",
+      "answer3": "Yes, comprehensive service is our standard. Our experienced installation team ensures professional and precise assembly of all structural elements, guaranteeing that your railings, fences, or stairs are installed according to the highest standards.",
+      "question4": "What are the benefits of using railings and fences made by your company?",
+      "answer4": "By choosing our products, you can be sure that you receive not only aesthetically pleasing and solid structures but also a guarantee of high quality. Our railings, fences, and other elements are carefully designed and manufactured with durability and functionality in mind, making them both an attractive feature of your space and a long-term investment.",
+      "question5": "Are your structures easy to maintain?",
+      "answer5": "Yes, we prioritize durability and ease of maintenance. Depending on the chosen material and finish, most of our constructions require minimal upkeep, allowing you to enjoy them for many years without frequent maintenance.",
+      "question6": "Do you offer a warranty on your products and services?",
+      "answer6": "Yes, we provide a warranty on all our products and installation work. Our goal is complete customer satisfaction, so we strive to ensure not only the highest quality of our constructions but also comprehensive after-sales service. If any issues arise with our products or services, we are ready to take corrective actions to ensure your satisfaction.",
+      "question7": "How much does welding steel structures cost?",
+      "answer7": "The price depends on the material, design, and scope of work. Contact us for a free quote.",
+      "question8": "What types of steel fences do you offer?",
+      "answer8": "We offer panel fences, wrought iron fences, and powder-coated steel fences tailored to your needs.",
+      "question9": "Do you manufacture sliding and swing gates on request?",
+      "answer9": "Yes, we create custom steel gate designs tailored to your property.",
+      "question10": "What anti-corrosion protections do you use?",
+      "answer10": "We use hot-dip galvanizing and powder coating to ensure the longevity of steel.",
+      "question11": "How can I order steel railings or fences?",
+      "answer11": "Contact us, provide dimensions and expectations, and we will prepare a personalized offer."
+    },
+    "OurProcess": {
+      "title": "THE BEST EXPERIENCE IN IMPLEMENTATION",
+      "subTitle": "OUR PROCESS",
+      "description": "Our order execution process guarantees the highest quality and professionalism at every stage. Through thorough consultation, precise production, and meticulous installation, we provide our clients with an unmatched experience that meets even the highest expectations.<br/><br/> Our passion for excellence is the key to the success of every project.",
+      "button": "Contact us",
+      "count1": "Consultation & Design",
+      "count1description": "We begin with a detailed consultation to determine your needs and preferences. Then, we create a personalized design.",
+      "count2": "Production & Welding",
+      "count2description": "After project approval, we proceed to production and welding. Our experienced teams ensure high quality and precision.",
+      "count3": "Installation & Delivery",
+      "count3description": "After production, we deliver the ordered elements to the site and carefully install them, paying attention to every detail."
+    },
+    "OurServices": {
+      "title": "FORGING CONNECTIONS. IGNITING PROGRESS.",
+      "subTitle": "Our Services",
+      "count1": "Welding of Railings and Fences",
+      "count1description": "Our welding expertise allows us to create railings and fences with exceptional durability and aesthetics. No matter the project, we are ready to deliver solid and elegant solutions that enhance your space.",
+      "count2": "Custom Metal Structures",
+      "count2description": "Need a custom metal structure? Our team of specialists can design and manufacture exactly what you need. Whether it’s a windmill, advertising frame, or architectural element, we guarantee high quality and precision.",
+      "count3": "Welding of Stairs and Balconies",
+      "count3description": "With our experience and welding skills, we can create stairs and balconies that are not only aesthetically pleasing but also provide long-lasting safety and durability.",
+      "count4": "Winter Gardens and Recreational Spaces",
+      "count4description": "Dreaming of a unique winter garden or recreational space? We can bring your vision to life, creating welded structures that become the heart of relaxation and entertainment for you and your loved ones.",
+      "count5": "Assembly and Installation",
+      "count5description": "You don’t need to worry about assembling our structures—our qualified technicians will take care of it for you. With our professional approach and attention to detail, everything will be installed to the highest standards.",
+      "count6": "Consulting and Design",
+      "count6description": "Need help choosing the best solution for your project? Our team of consultants and designers offers expert support, helping you select the right materials, structures, and technical solutions that meet your expectations and needs."
+    },
+    "Realization": {
+      "title": "Completed Orders of Our Clients",
+      "subTitle": "Realizations",
+      "count1": "Railings",
+      "count1description": "Safe railings, elegance in every detail.",
+      "count2": "Gates",
+      "count2description": "Modern gates, security and style.",
+      "count3": "Attached Balconies",
+      "count3description": "Extended spaces – attached balconies.",
+      "count4": "Fences",
+      "count4description": "Sturdy fences, your privacy fully protected."
+    },
+    "Stats": {
+      "hours": "Hours of Expertise",
+      "clients": "Satisfied Clients",
+      "projects": "Completed Projects"
+    },
+    "Steps": {
+      "quality": "Quality of Workmanship",
+      "qualityDescription": "Exceptional precision and attention to detail are our top priorities. Every element is crafted with utmost care to ensure the highest quality and customer satisfaction.",
+      "apply": "Certifications and Compliance",
+      "applyDescription": "We use only the highest quality materials that comply with the latest standards and hold certifications guaranteeing their quality and safety.",
+      "price": "Competitive Prices",
+      "priceDescription": "We offer competitive pricing regardless of project scale, without compromising on quality. Our goal is to provide valuable services while maintaining attractive rates for our clients.",
+      "expierience": "<br /> Years <br /> of Experience",
+      "expierienceDescription": "With over a decade of experience in the industry, our company has built a solid reputation, earned customer trust, and developed expertise over the years.",
+      "button": "Contact Us"
+    },
+    "VisionMission": {
+      "title": "WE FORGE CONNECTIONS. WE IGNITE PROGRESS.",
+      "subTitle": "Vision and Mission",
+      "description": "We are committed to quality and precision in our work. We don't just create fences, gates, and railings, but also build lasting relationships with our clients. Our mission is to ensure not only safety and aesthetics but also complete satisfaction and trust.",
+      "sentence": "Your solid foundation, ",
+      "sentencePart": "your aesthetic vision.",
+      "missionTitle": "Our Mission",
+      "missionDescription": "We confidently focus on quality and precision, creating not only fences, gates, and railings but also lasting bonds with our clients. Our mission is to ensure not only safety and aesthetics but also satisfaction and trust.",
+      "visionTitle": "Our Vision",
+      "visionDescription": "We envision a world where our products are not just architectural elements but also symbols of solidity and style. Our vision includes inspiring spaces that connect people and inspire continuous progress and development."
+    }
+  },
+  "Header": {
+    "contact": "Contact",
+    "gallery": "Gallery",
+    "about": "About us",
+    "home": "Home",
+    "blog": "Blog"
+  },
+  "Footer": {
+    "location": "Location",
+    "phone": "Phone",
+    "email": "Email",
+    "country": "Drawno, Poland",
+    "copy": "2025 © All rights reserved"
+  },
+  "Blog": {
+    "title": "Blog - Stalumo",
+    "homeTitle": "Home",
+    "empty": "No posts",
+    "loadMore": "Load more",
+    "loading": "Loading...",
+    "description": "Discover our blog about welding, gates, garages, and railings. Find practical advice and information about steel structures in Germany and Poland.",
+    "keywords": "fence production, welding, steel structures, welding blog, steel structures Germany"
+  },
+  "About": {
+    "title": "About Us",
+    "homeTitle": "Home",
+    "descriptionTitle": "Professional Welding and Metal Products in the Polish and German Markets",
+    "description": "Welcome to Stalumo – a company passionate about metal and committed to excellence. With over 10 years of experience in the Polish and German markets, we pride ourselves on our reputation as a reliable partner in the metal industry. <br /> <br /> Since our inception in 2010, we have been continually striving to raise the standards of quality and professionalism in our work. Our services cover a wide range of activities, from welding to the production of gates, fences, railings, balconies, canopies, and winter gardens – always with attention to detail and precision. <br /> <br /> We are confident that our products and services stand out not only for their excellent quality but also for flexibility and a personalized approach to client needs. Each order is treated as unique, and we tailor our solutions to specific requirements, guaranteeing satisfaction for even the most demanding clients. <br /> <br /> What sets us apart? In addition to our commitment to delivering the highest quality products, we are also a cohesive team of professionals ready to tackle even the most complex challenges. Our company consists of skilled specialists for whom metalworking is not just a job but a true passion. <br /> <br /> We operate not only in Poland but also in Germany, which allows us to expand our reach and offer our products and services to clients abroad. Our presence in two markets also enables us to continuously grow and improve our skills to meet the evolving needs of our clients. <br /> <br /> If you are looking for a professional partner in the metal industry who will provide you with not only high-quality products but also comprehensive service and support at every stage of your project – Stalumo is the perfect choice for you. Join our satisfied clients and see for yourself why Stalumo guarantees reliability, quality, and professionalism. <br /> <br /> We invite you to cooperate!"
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "homeTitle": "Home",
+    "description": "Got a project in mind? Reach out to us via the contact form, and we'll respond as soon as possible. We're happy to assist you in bringing your idea to life, ensuring expert help and top-quality execution. We look forward to your questions and suggestions – together, we’ll create something exceptional!",
+    "button": "Send Message",
+    "topic": "Subject",
+    "email": "Email Address",
+    "content": "What would you like to ask us?",
+    "loading": "Loading...",
+    "success": "The message was successfully sent. We will respond as soon as possible to the provided email address.",
+    "error": "Something went wrong"
+  },
+  "Gallery": { "title": "Gallery", "homeTitle": "Home" },
+  "contactForm": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit"
+  },
+  "validation": {
+    "invalid": "Email invalid",
+    "required": "Name required",
+    "min": "Message required to be at least 10 characters"
+  }
+}

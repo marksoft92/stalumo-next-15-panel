@@ -1,0 +1,162 @@
+{
+  "HomePage": {
+    "AboutUs": {
+      "title": "Schweißkunst, die Exzellenz schmiedet",
+      "subTitle": "ÜBER UNS",
+      "description": "Wir sind ein Team von Spezialisten, die nicht nur perfekt schweißen können, sondern auch eine tiefe Leidenschaft für das Handwerk haben. Unsere zehnjährige Erfahrung ermöglicht es uns, den Weg der Exzellenz mit Zuversicht zu beschreiten.<br/><br/> Jedes Projekt ist eine Herausforderung, die wir mit Entschlossenheit angehen, um unseren Kunden nicht nur ein Produkt von höchster Qualität zu liefern, sondern auch Zufriedenheit und die Gewissheit, dass ihre Erwartungen übertroffen wurden.",
+      "button": "Mehr über uns",
+      "count": "Abgeschlossene Projekte"
+    },
+    "Excellence": {
+      "title": "Stahlbau in Deutschland und Polen",
+      "subTitle": "Perfekte Ausführung",
+      "description": "Unsere Arbeit ist nicht nur perfekte Ausführung, sondern auch Leidenschaft und Engagement, die immer zur Exzellenz führen. Wir fertigen Stahlkonstruktionen in Polen und in allen Regionen Deutschlands.",
+      "button": "Kostenloses Angebot anfordern"
+    },
+    "Faq": {
+      "title": "WAS DU WISSEN SOLLTEST",
+      "question1": "Können Sie Geländer und Zäune nach meinen individuellen Bedürfnissen entwerfen?",
+      "answer1": "Natürlich! Unser Designteam ist auf die Erstellung maßgeschneiderter Lösungen spezialisiert, die perfekt zu Ihren Anforderungen und Vorlieben passen. Egal, ob Sie ein Geländer mit einer ungewöhnlichen Form oder ein einzigartiges Zaunmuster benötigen – wir setzen Ihre Ideen um.",
+      "question2": "Kann ich eine Beratung zur Auswahl der richtigen Lösung für meinen Raum erhalten?",
+      "answer2": "Selbstverständlich! Unser Expertenteam steht Ihnen in jeder Phase des Prozesses mit fachkundiger Beratung zur Seite. Vom ersten Kontakt bis zur Endmontage sind wir für Sie da, um Ihre Fragen zu beantworten, unser Wissen zu teilen und Ihnen die beste Lösung für Ihr Zuhause oder Ihren Garten zu empfehlen.",
+      "question3": "Bieten Sie Montageservices an?",
+      "answer3": "Ja, umfassender Service ist unser Standard. Unser erfahrenes Montageteam sorgt für eine professionelle und präzise Installation aller Bauelemente, sodass Ihre Geländer, Zäune oder Treppen nach höchsten Standards montiert werden.",
+      "question4": "Welche Vorteile bieten Geländer und Zäune Ihres Unternehmens?",
+      "answer4": "Mit unseren Produkten erhalten Sie nicht nur ästhetische und stabile Konstruktionen, sondern auch eine Qualitätsgarantie. Unsere Geländer, Zäune und weiteren Bauelemente sind mit Blick auf Langlebigkeit und Funktionalität konzipiert, sodass sie nicht nur eine attraktive Ergänzung Ihres Raums, sondern auch eine nachhaltige Investition darstellen.",
+      "question5": "Sind Ihre Konstruktionen pflegeleicht?",
+      "answer5": "Ja, wir setzen auf Langlebigkeit und einfache Wartung. Je nach gewähltem Material und Finish erfordern die meisten unserer Konstruktionen nur minimale Pflege, sodass Sie sie jahrelang genießen können, ohne sich um aufwendige Wartungsarbeiten kümmern zu müssen.",
+      "question6": "Geben Sie Garantie auf Ihre Produkte und Dienstleistungen?",
+      "answer6": "Ja, wir bieten Garantie auf all unsere Produkte und Montagedienstleistungen. Unser Ziel ist es, unsere Kunden vollkommen zufriedenzustellen, daher legen wir nicht nur Wert auf höchste Qualität, sondern auch auf einen umfassenden After-Sales-Service. Falls Probleme mit unseren Produkten oder Dienstleistungen auftreten, sind wir bereit, geeignete Maßnahmen zur Lösung zu ergreifen.",
+      "question7": "Wie viel kostet das Schweißen von Stahlkonstruktionen?",
+      "answer7": "Der Preis hängt vom Material, Design und Arbeitsumfang ab. Kontaktieren Sie uns für ein kostenloses Angebot.",
+      "question8": "Welche Arten von Stahlzäunen bieten Sie an?",
+      "answer8": "Wir bieten Paneelzäune, Schmiedezäune und pulverbeschichtete Stahlzäune, die Ihren Anforderungen entsprechen.",
+      "question9": "Stellen Sie maßgeschneiderte Schiebe- und Flügeltore her?",
+      "answer9": "Ja, wir fertigen individuell gestaltete Stahltore, die zu Ihrem Grundstück passen.",
+      "question10": "Welche Korrosionsschutzmaßnahmen verwenden Sie?",
+      "answer10": "Wir verwenden Feuerverzinkung und Pulverbeschichtung, um die Langlebigkeit des Stahls zu gewährleisten.",
+      "question11": "Wie kann ich Geländer oder Stahlzäune bestellen?",
+      "answer11": "Kontaktieren Sie uns, nennen Sie Maße und Erwartungen, und wir erstellen Ihnen ein individuelles Angebot."
+    },
+    "OurProcess": {
+      "title": "DIE BESTE ERFAHRUNG IN DER UMSETZUNG",
+      "subTitle": "UNSER PROZESS",
+      "description": "Unser Auftragsabwicklungsprozess garantiert höchste Qualität und Professionalität in jeder Phase. Durch eine sorgfältige Beratung, präzise Produktion und eine akkurate Montage bieten wir unseren Kunden ein unvergleichliches Erlebnis, das selbst die höchsten Erwartungen erfüllt.<br/><br/> Unsere Leidenschaft für Perfektion ist der Schlüssel zum Erfolg jedes Projekts.",
+      "button": "Kontaktieren Sie uns",
+      "count1": "Beratung & Design",
+      "count1description": "Wir beginnen mit einer detaillierten Beratung, um Ihre Bedürfnisse und Wünsche zu verstehen. Anschließend erstellen wir ein individuelles Design.",
+      "count2": "Produktion & Schweißen",
+      "count2description": "Nach der Projektfreigabe gehen wir in die Produktion und das Schweißen über. Unsere erfahrenen Teams gewährleisten höchste Qualität und Präzision.",
+      "count3": "Montage & Lieferung",
+      "count3description": "Nach der Produktion liefern wir die bestellten Elemente an den Standort und montieren sie sorgfältig, wobei wir auf jedes Detail achten."
+    },
+    "OurServices": {
+      "title": "VERBINDUNGEN SCHMIEDEN. FORTSCHRITT ENTZÜNDEN.",
+      "subTitle": "Unsere Dienstleistungen",
+      "count1": "Schweißen von Geländern und Zäunen",
+      "count1description": "Dank unserer Schweißexpertise fertigen wir Geländer und Zäune mit außergewöhnlicher Haltbarkeit und Ästhetik. Unabhängig vom Projekt liefern wir robuste und elegante Lösungen, die Ihren Raum aufwerten.",
+      "count2": "Maßgeschneiderte Metallkonstruktionen",
+      "count2description": "Benötigen Sie eine maßgeschneiderte Metallkonstruktion? Unser Expertenteam kann genau das entwerfen und fertigen, was Sie brauchen. Ob Windmühle, Werberahmen oder architektonisches Element – wir garantieren höchste Qualität und Präzision.",
+      "count3": "Schweißen von Treppen und Balkonen",
+      "count3description": "Mit unserer Erfahrung und Schweißkompetenz fertigen wir Treppen und Balkone, die nicht nur optisch ansprechend sind, sondern auch langfristige Sicherheit und Haltbarkeit bieten.",
+      "count4": "Wintergärten und Erholungsräume",
+      "count4description": "Träumen Sie von einem einzigartigen Wintergarten oder Erholungsbereich? Wir realisieren Ihre Vision und schaffen geschweißte Konstruktionen, die zum Mittelpunkt der Entspannung und Unterhaltung für Sie und Ihre Familie werden.",
+      "count5": "Montage und Installation",
+      "count5description": "Sie müssen sich keine Sorgen um die Montage unserer Konstruktionen machen – unsere qualifizierten Techniker übernehmen das für Sie. Mit unserer professionellen Herangehensweise und Liebe zum Detail stellen wir sicher, dass alles nach höchsten Standards installiert wird.",
+      "count6": "Beratung und Planung",
+      "count6description": "Brauchen Sie Unterstützung bei der Auswahl der besten Lösung für Ihr Projekt? Unser Team aus Beratern und Designern steht Ihnen mit fachkundiger Unterstützung zur Seite und hilft Ihnen, die passenden Materialien, Konstruktionen und technischen Lösungen zu finden, die Ihren Erwartungen und Anforderungen entsprechen."
+    },
+    "Realization": {
+      "title": "Abgeschlossene Aufträge unserer Kunden",
+      "subTitle": "Realisierungen",
+      "count1": "Geländer",
+      "count1description": "Sichere Geländer, Eleganz in jedem Detail.",
+      "count2": "Tore",
+      "count2description": "Moderne Tore, Sicherheit und Stil.",
+      "count3": "Angebaute Balkone",
+      "count3description": "Erweiterte Räume – angebaute Balkone.",
+      "count4": "Zäune",
+      "count4description": "Robuste Zäune, Ihre Privatsphäre vollständig geschützt."
+    },
+    "Stats": {
+      "hours": "Expertenstunden",
+      "clients": "Zufriedene Kunden",
+      "projects": "Abgeschlossene Projekte"
+    },
+    "Steps": {
+      "quality": "Qualität der Ausführung",
+      "qualityDescription": "Hervorragende Präzision und Sorgfalt stehen bei uns an erster Stelle. Jedes Detail wird mit höchster Qualität verarbeitet, um die Zufriedenheit unserer Kunden zu gewährleisten.",
+      "apply": "Zertifikate und Konformität",
+      "applyDescription": "Wir verwenden ausschließlich Materialien von höchster Qualität, die den neuesten Standards entsprechen und zertifiziert sind, um Qualität und Sicherheit zu gewährleisten.",
+      "price": "Konkurrenzfähige Preise",
+      "priceDescription": "Wir bieten wettbewerbsfähige Preise unabhängig vom Projektumfang, ohne Kompromisse bei der Qualität. Unser Ziel ist es, wertvolle Dienstleistungen zu fairen Preisen anzubieten.",
+      "expierience": "<br />Jahrelange <br /> Erfahrung",
+      "expierienceDescription": "Mit über zehn Jahren Erfahrung in der Branche haben wir uns einen soliden Ruf erarbeitet, das Vertrauen der Kunden gewonnen und umfangreiche Fachkenntnisse entwickelt.",
+      "button": "Kontaktieren Sie uns"
+    },
+    "VisionMission": {
+      "title": "WIR SCHMIEDELN VERBINDUNGEN. WIR ENTZÜNDEN DEN FORTSCHRITT.",
+      "subTitle": "Vision und Mission",
+      "description": "Wir setzen uns für Qualität und Präzision in unserer Arbeit ein. Wir schaffen nicht nur Zäune, Tore und Geländer, sondern bauen auch dauerhafte Beziehungen zu unseren Kunden auf. Unsere Mission besteht darin, nicht nur Sicherheit und Ästhetik zu gewährleisten, sondern auch volle Zufriedenheit und Vertrauen.",
+      "sentence": "Ihr solides Fundament, ",
+      "sentencePart": "Ihre ästhetische Vision.",
+      "missionTitle": "Unsere Mission",
+      "missionDescription": "Wir setzen mit Zuversicht auf Qualität und Präzision, schaffen nicht nur Zäune, Tore und Geländer, sondern auch dauerhafte Bindungen zu unseren Kunden. Unsere Mission ist es, nicht nur Sicherheit und Ästhetik zu gewährleisten, sondern auch Zufriedenheit und Vertrauen.",
+      "visionTitle": "Unsere Vision",
+      "visionDescription": "Wir stellen uns eine Welt vor, in der unsere Produkte nicht nur architektonische Elemente, sondern auch Symbole für Solidität und Stil sind. Unsere Vision umfasst inspirierende Räume, die Menschen verbinden und zu ständigem Fortschritt und Entwicklung anregen."
+    }
+  },
+  "Header": {
+    "contact": "Zur Kontaktseite",
+    "gallery": "Projekte",
+    "about": "Über uns",
+    "home": "Heim",
+    "blog": "Blog"
+  },
+  "Footer": {
+    "location": "Standort",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "country": "Drawno, Polen",
+    "copy": "2025 © Alle Rechte vorbehalten"
+  },
+  "Blog": {
+    "title": "Blog - Stalumo",
+    "homeTitle": "Startseite",
+    "empty": "Keine Beiträge",
+    "loadMore": "Mehr laden",
+    "loading": "Lädt...",
+    "description": "Entdecken Sie unseren Blog über Schweißen, Tore, Garagen und Geländer. Finden Sie praktische Tipps und Informationen über Stahlkonstruktionen in Deutschland und Polen.",
+    "keywords": "Zaunproduktion, Schweißen, Stahlkonstruktionen, Schweißblog, Stahlkonstruktionen Deutschland"
+  },
+  "About": {
+    "title": "Über uns",
+    "homeTitle": "Startseite",
+    "descriptionTitle": "Professionelles Schweißen und Metallprodukte auf dem polnischen und deutschen Markt",
+    "description": "Willkommen bei Stalumo – ein Unternehmen, das sich für Metall begeistert und sich der Exzellenz verpflichtet. Mit über 10 Jahren Erfahrung auf dem polnischen und deutschen Markt sind wir stolz auf unseren Ruf als zuverlässiger Partner in der Metallindustrie. <br /> <br /> Seit unserer Gründung im Jahr 2010 streben wir ständig danach, die Qualitäts- und Professionalitätsstandards in unserer Arbeit zu erhöhen. Unsere Dienstleistungen umfassen ein breites Spektrum an Tätigkeiten, von Schweißarbeiten bis hin zur Produktion von Toren, Zäunen, Geländern, Balkonen, Überdachungen und Wintergärten – immer mit Liebe zum Detail und präziser Ausführung. <br /> <br /> Wir sind überzeugt, dass unsere Produkte und Dienstleistungen nicht nur durch ihre hervorragende Qualität, sondern auch durch ihre Flexibilität und individuelle Herangehensweise an die Bedürfnisse der Kunden herausragen. Jede Bestellung betrachten wir als einzigartig und passen unsere Lösungen an die spezifischen Anforderungen an, um die Zufriedenheit selbst der anspruchsvollsten Kunden zu garantieren. <br /> <br /> Was zeichnet uns aus? Neben unserem Engagement, Produkte von höchster Qualität zu liefern, sind wir auch ein eingespieltes Team von Fachleuten, das bereit ist, selbst die komplexesten Herausforderungen anzunehmen. Unser Unternehmen besteht aus qualifizierten Spezialisten, für die Metallprodukte nicht nur Arbeit, sondern wahre Leidenschaft sind. <br /> <br /> Wir sind nicht nur in Polen tätig, sondern auch in Deutschland, was es uns ermöglicht, unsere Reichweite zu erweitern und unsere Produkte und Dienstleistungen auch Kunden im Ausland anzubieten. Unsere Präsenz auf zwei Märkten ermöglicht es uns auch, uns kontinuierlich weiterzuentwickeln und unsere Fähigkeiten zu verbessern, um den sich verändernden Bedürfnissen unserer Kunden gerecht zu werden. <br /> <br /> Wenn Sie einen professionellen Partner in der Metallbranche suchen, der Ihnen nicht nur Produkte von hoher Qualität, sondern auch umfassenden Service und Unterstützung in jeder Phase Ihres Projekts bietet – Stalumo ist die perfekte Wahl für Sie. Schließen Sie sich unseren zufriedenen Kunden an und überzeugen Sie sich selbst, warum Stalumo eine Garantie für Zuverlässigkeit, Qualität und Professionalität ist. <br /> <br /> Wir laden Sie ein, mit uns zusammenzuarbeiten!"
+  },
+  "Contact": {
+    "title": "Kontaktieren Sie uns",
+    "homeTitle": "Startseite",
+    "description": "Haben Sie ein Projekt im Kopf? Kontaktieren Sie uns über das Kontaktformular, und wir antworten so schnell wie möglich. Wir helfen Ihnen gerne dabei, Ihre Idee umzusetzen und garantieren fachkundige Unterstützung sowie höchste Ausführungsqualität. Wir freuen uns auf Ihre Fragen und Vorschläge – gemeinsam schaffen wir etwas Einzigartiges!",
+    "button": "Nachricht senden",
+    "topic": "Thema",
+    "email": "E-Mail-Adresse",
+    "content": "Worüber möchten Sie uns fragen?",
+    "loading": "Lädt...",
+    "success": "Die Nachricht wurde erfolgreich gesendet. Wir werden so schnell wie möglich an die angegebene E-Mail-Adresse antworten.",
+    "error": "Etwas ist schiefgelaufen"
+  },
+  "Gallery": { "title": "Projekte", "homeTitle": "Startseite" },
+  "contactForm": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Abschicken"
+  },
+  "validation": {
+    "invalid": "Email ungültig",
+    "required": "Name erforderlich",
+    "min": "Message erforderlich, um mindestens 10 Zeichen zu sein"
+  }
+}

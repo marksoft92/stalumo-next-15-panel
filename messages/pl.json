@@ -1,0 +1,165 @@
+{
+  "HomePage": {
+    "AboutUs": {
+      "title": "Kunszt spawalniczy kujący doskonałość",
+      "subTitle": "O NAS",
+      "description": "Jesteśmy zespołem specjalistów, których cechuje nie tylko umiejętność perfekcyjnego spawania, ale także głęboka pasja do tworzenia. Nasze doświadczenie oparte na dziesięcioletniej praktyce pozwala nam śmiało kroczyć ścieżką doskonałości.<br/><br/> Każdy projekt traktujemy jako wyzwanie, które podejmujemy z determinacją, aby zapewnić naszym klientom nie tylko produkt o najwyższej jakości, ale także satysfakcję i pewność, że ich oczekiwania zostały spełnione ponad oczekiwania.",
+      "button": "Więcej o nas",
+      "count": "Wykonanych<br/>Projektów"
+    },
+    "Excellence": {
+      "title": "Konstrukcje stalowe na terenie całych Niemiec i Polski",
+      "subTitle": "Doskonałe wykonanie",
+      "description": "Nasza praca to nie tylko doskonałe wykonanie, to również pasja i zaangażowanie, które zawsze doprowadzają do doskonałości. Wykonujemy konstrukcje stalowe w Polsce i każdym rejonie Niemiec.",
+      "button": "Zamów darmową wycenę"
+    },
+    "Faq": {
+      "title": "CO POWINIENEŚ WIEDZIEĆ",
+      "question1": "Czy możecie zaprojektować balustrady i ogrodzenia dostosowane do moich indywidualnych potrzeb?",
+      "answer1": "Oczywiście! Nasz zespół projektowy specjalizuje się w tworzeniu niestandardowych rozwiązań, które idealnie odpowiadają Twoim wymaganiom i preferencjom. Bez względu na to, czy potrzebujesz balustrady o nietypowym kształcie, czy też nietypowego wzoru ogrodzenia, jesteśmy gotowi zrealizować Twoje pomysłu",
+      "question2": "Czy mogę liczyć na poradę w wyborze odpowiedniego rozwiązania dla mojej przestrzeni?",
+      "answer2": "Oczywiście! Nasz zespół specjalistów służy fachowym doradztwem na każdym etapie procesu. Od pierwszego kontaktu aż po zakończenie montażu, jesteśmy tu, aby odpowiedzieć na Twoje pytania, podzielić się wiedzą i zapewnić Ci kompleksową pomoc w wyborze najlepszego rozwiązania dla Twojego domu lub ogrodu.",
+      "question3": "Czy oferujecie usługi montażu?",
+      "answer3": "Tak, kompleksowa obsługa jest naszym standardem. Nasz doświadczony zespół montażowy zadba o profesjonalne i precyzyjne zamontowanie wszystkich elementów konstrukcji. Dzięki temu możesz mieć pewność, że Twoje balustrady, ogrodzenia czy schody zostaną zainstalowane zgodnie z najwyższymi standardami.",
+      "question4": "Jakie są korzyści korzystania z balustrad i ogrodzeń wykonanych przez waszą firmę?",
+      "answer4": "Wybierając nasze produkty, możesz być pewien, że otrzymujesz nie tylko estetyczne i solidne konstrukcje, ale także gwarancję wysokiej jakości. Nasze balustrady, ogrodzenia i inne elementy są starannie zaprojektowane i wykonane z myślą o trwałości i funkcjonalności, co sprawia, że są one nie tylko atrakcyjnym elementem Twojej przestrzeni, ale także długotrwałym inwestycją.",
+      "question5": "Czy wasze konstrukcje są łatwe w utrzymaniu?",
+      "answer5": "Tak, stawiamy na trwałość i łatwość utrzymania naszych produktów. W zależności od wybranego materiału i wykończenia, większość naszych konstrukcji wymaga minimalnej konserwacji, co pozwala Ci cieszyć się nimi przez wiele lat bez konieczności częstego pielęgnowania.",
+      "question6": "Czy oferujecie gwarancję na wasze produkty i usługi?",
+      "answer6": "Tak, zapewniamy gwarancję na wszystkie nasze produkty oraz wykonane przez nas prace montażowe. Naszym celem jest pełne zadowolenie klienta, dlatego też staramy się zapewnić nie tylko wysoką jakość naszych konstrukcji, ale także kompleksową obsługę posprzedażną. Jeśli pojawią się jakiekolwiek problemy z naszymi produktami lub usługami, jesteśmy gotowi podjąć odpowiednie kroki naprawcze, aby zapewnić Twoją satysfakcję.",
+      "question7": "Ile kosztuje spawanie konstrukcji stalowych?",
+      "answer7": "Cena zależy od materiału, projektu i zakresu prac. Skontaktuj się, aby otrzymać darmową wycenę.",
+      "question8": "Jakie są rodzaje ogrodzeń stalowych?",
+      "answer8": "Oferujemy ogrodzenia panelowe, kute oraz stalowe malowane proszkowo, dopasowane do Twoich potrzeb.",
+      "question9": "Czy wykonujecie bramy przesuwne i skrzydłowe na zamówienie?",
+      "answer9": "Tak, realizujemy indywidualne projekty bram stalowych, dopasowanych do Twojej posesji.",
+      "question10": "Jakie zabezpieczenia antykorozyjne stosujecie? ",
+      "answer10": "Stosujemy cynkowanie ogniowe i malowanie proszkowe, aby zapewnić długowieczność stali.",
+      "question11": "Jak zamówić balustrady lub ogrodzenia stalowe?",
+      "answer11": "Skontaktuj się z nami, podaj wymiary i oczekiwania, a my przygotujemy indywidualną ofertę."
+    },
+    "OurProcess": {
+      "title": "NAJLEPSZE DOŚWIADCZENIE W REALIZACJI",
+      "subTitle": "NASZ PROCES",
+      "description": "Nasz proces realizacji zamówień to gwarancja najwyższej jakości i profesjonalizmu na każdym etapie. Dzięki starannej konsultacji, precyzyjnej produkcji i dokładnemu montażowi zapewniamy naszym klientom niezrównane doświadczenie, które spełnia nawet najwyższe oczekiwania.<br/><br/> Nasza pasja do doskonałości jest kluczem do sukcesu każdego projektu.",
+      "button": "Skontaktuj się z nami",
+      "count1": "Konsultacja i projektowanie",
+      "count1description": "Rozpoczynamy od szczegółowej konsultacji, aby ustalić Twoje potrzeby i preferencje. Następnie tworzymy spersonalizowany projekt.",
+      "count2": "Produkcja i spawanie",
+      "count2description": "Po zatwierdzeniu projektu, przechodzimy do produkcji i spawania. Nasze doświadczone zespoły zapewniają wysoką jakość i precyzję wykonania.",
+      "count3": "Montaż i dostawa",
+      "count3description": "Po produkcji, dostarczamy zamówione elementy na miejsce i dokładnie je montujemy, dbając o każdy detal."
+    },
+    "OurServices": {
+      "title": "KUJEMY POŁĄCZENIA. ROZPALAMY POSTĘP.",
+      "subTitle": "Nasze usługi",
+      "count1": "Spawanie balustrad i ogrodzeń",
+      "count1description": "Nasze doświadczenie w spawaniu pozwala nam tworzyć balustrady i ogrodzenia o doskonałej wytrzymałości i estetyce. Niezależnie od projektu, jesteśmy gotowi dostarczyć solidne i eleganckie rozwiązania, które dodadzą wartości Twojej przestrzeni.",
+      "count2": "Konstrukcje metalowe na wymiar",
+      "count2description": "Potrzebujesz niestandardowej konstrukcji metalowej? Nasz zespół specjalistów może zaprojektować i wykonać dokładnie to, czego potrzebujesz. Bez względu na to, czy jest to wiatrak, konstrukcja pod reklamę czy element architektoniczny, zapewniamy wysoką jakość i precyzję wykonania.",
+      "count3": "Spawanie schodów i balkonów",
+      "count3description": "Dzięki naszemu doświadczeniu i umiejętnościom w spawaniu, możemy stworzyć schody i balkony, które nie tylko będą estetycznym elementem Twojej przestrzeni, ale także zapewnią bezpieczeństwo i trwałość przez wiele lat.",
+      "count4": "Ogrody zimowe i przestrzenie rekreacyjne",
+      "count4description": "Marzysz o wyjątkowym ogrodzie zimowym lub przestrzeni rekreacyjnej? Nasza firma może zrealizować Twoje marzenia, tworząc spawane konstrukcje, które staną się centrum relaksu i rozrywki dla Ciebie i Twoich bliskich.",
+      "count5": "Montaż i instalacja",
+      "count5description": "Nie musisz martwić się o montaż naszych konstrukcji - nasi wykwalifikowani technicy zajmą się tym za Ciebie. Dzięki naszemu profesjonalnemu podejściu i dbałości o szczegóły, możesz mieć pewność, że wszystko zostanie zainstalowane zgodnie z najwyższymi standardami.",
+      "count6": "Doradztwo i projektowanie",
+      "count6description": "Potrzebujesz pomocy w doborze najlepszego rozwiązania dla Twojego projektu? Nasz zespół doradców i projektantów służy fachowym wsparciem, pomagając Ci wybrać odpowiednie materiały, konstrukcje i rozwiązania techniczne, które spełnią Twoje oczekiwania i potrzeby."
+    },
+    "Realization": {
+      "title": "Zrealizowane zamówienia naszych klientów",
+      "subTitle": "Realizacje",
+      "count1": "Balustrady",
+      "count1description": "Bezpieczne balustrady, elegancja w każdym szczególe.",
+      "count2": "Bramy",
+      "count2description": "Nowoczesne bramy, ochrona i styl.",
+      "count3": "Balkony dostawiane",
+      "count3description": "Rozszerzone przestrzenie - dostawiane balkony.",
+      "count4": "Ogrodzenia",
+      "count4description": "Solidne ogrodzenia, Twoja prywatność w pełni chroniona."
+    },
+    "Stats": {
+      "hours": "Godziny ekspertyzy",
+      "clients": "Zadowoleni klienci",
+      "projects": "Wykonanych projektów"
+    },
+    "Steps": {
+      "quality": "Jakość wykonania",
+      "qualityDescription": "Doskonała precyzja i staranność są naszymi priorytetami. Każdy detal jest dopracowany z dbałością o najwyższą jakość, aby zapewnić satysfakcję naszych klientów.",
+      "apply": "Certyfikaty i zgodność",
+      "applyDescription": "Wykorzystujemy tylko najwyższej jakości materiały, które są zgodne z najnowszymi standardami i posiadają odpowiednie certyfikaty potwierdzające ich jakość i bezpieczeństwo.",
+      "price": "Konkurencyjne ceny",
+      "priceDescription": "Oferujemy konkurencyjne ceny, niezależnie od skali projektu, bez kompromisów w jakości wykonania. Naszym celem jest zapewnienie wartościowych usług przy zachowaniu atrakcyjnych cen dla naszych klientów.",
+      "expierience": "<br /> Lata <br /> doświadczenia",
+      "expierienceDescription": "Nasza firma może pochwalić się dziesięcioletnim doświadczeniem w branży, co świadczy o naszej solidności, zaufaniu klientów i umiejętnościach zdobytych na przestrzeni lat.",
+      "button": "Skontaktuj się z nami"
+    },
+    "VisionMission": {
+      "title": "KUJEMY POŁĄCZENIA. ROZPALAMY POSTĘP.",
+      "subTitle": "Wizja i Misja",
+      "description": "Jesteśmy oddani jakości i precyzji w naszej pracy, nie tylko tworzymy ogrodzenia, bramy i balustrady, ale także budujemy trwałe relacje z naszymi klientami. Nasza misja polega na zapewnieniu nie tylko bezpieczeństwa i estetyki, lecz także pełnej satysfakcji i zaufania.",
+      "sentence": "Twój solidny fundament,",
+      "sentencePart": "twoje estetyczne wyobrażenia.",
+      "missionTitle": "Nasza misja",
+      "missionDescription": "Śmiało stawiamy na jakość i precyzję, tworząc nie tylko ogrodzenia, bramy i balustrady, lecz także trwające więzi z naszymi klientami. Nasza misja polega na zapewnieniu nie tylko bezpieczeństwa i estetyki, ale również satysfakcji i zaufania.",
+      "visionTitle": "Nasza wizja",
+      "visionDescription": "Wyobrażamy sobie świat, w którym nasze wyroby stanowią nie tylko element architektoniczny, ale także symbol solidności i stylu. Nasza wizja obejmuje inspirujące przestrzenie, które łączą ludzi i inspirują do ciągłego postępu i rozwoju."
+    }
+  },
+  "Header": {
+    "contact": "Kontakt",
+    "gallery": "Galeria",
+    "about": "O nas",
+    "home": "Strona Główna",
+    "blog": "Blog"
+  },
+  "Footer": {
+    "location": "Lokalizacja",
+    "phone": "Telefon",
+    "email": "Email",
+    "country": "Drawno, Polska",
+    "copy": "2025 © Wszystkie prawa zasteżone"
+  },
+  "Blog": {
+    "title": "Blog - Stalumo",
+    "homeTitle": "Strona główna",
+    "empty": "Brak wpisów",
+    "loadMore": "Załaduj więcej",
+    "loading": "Ładowanie...",
+    "description": "Odkryj nasz blog o spawaniu, bramach, garażach i barierkach. Znajdziesz praktyczne porady oraz informacje o konstrukcjach stalowych w Niemczech i Polsce.",
+    "keywords": "produkcja ogrodzeń, spawanie, konstrukcje stalowe, blog o spawaniu, kostrukcje stalowe niemcy"
+  },
+  "About": {
+    "title": "O nas",
+    "homeTitle": "Strona główna",
+    "descriptionTitle": "Profesjonalne Spawanie i Wyroby Metalowe na Polskim i Niemieckim Rynku",
+    "description": "Witajcie w Stalumo - firmie z pasją do metalu i zobowiązaniem do doskonałości. Z ponad 10-letnim doświadczeniem na rynku polskim i niemieckim, jesteśmy dumni z naszej reputacji jako solidnego partnera w branży metalowej. <br /> <br /> Od samego początku naszej działalności w 2010 roku, nieustannie dążymy do podnoszenia standardów jakości i profesjonalizmu w naszej pracy. Nasze usługi obejmują szeroki zakres działań, począwszy od spawania po produkcję bram, ogrodzeń, balustrad, balkonów, aż po wiaty i ogrody zimowe - zawsze z dbałością o detale i precyzję wykonania. <br /> <br /> Jesteśmy przekonani, że nasze produkty i usługi wyróżniają się nie tylko doskonałą jakością, ale także elastycznością i indywidualnym podejściem do potrzeb klienta. Każde zamówienie traktujemy jako wyjątkowe i dostosowujemy nasze rozwiązania do konkretnych wymagań, gwarantując satysfakcję nawet najbardziej wymagających klientów. <br /> <br /> Co nas wyróżnia? Oprócz naszego zaangażowania w dostarczanie produktów najwyższej jakości, jesteśmy również zgranym zespołem profesjonalistów, gotowym sprostać nawet najbardziej skomplikowanym wyzwaniom. Nasza firma składa się z wykwalifikowanych specjalistów, dla których metalowe wyroby to nie tylko praca, ale prawdziwa pasja. <br /> <br /> Działamy nie tylko na terenie Polski, ale również w Niemczech, co pozwala nam poszerzyć nasz zasięg i zaoferować nasze produkty i usługi klientom również za granicą. Nasza obecność na dwóch rynkach umożliwia nam również ciągły rozwój i doskonalenie naszych umiejętności, aby sprostać zmieniającym się potrzebom naszych klientów. <br /> <br /> Jeśli szukasz profesjonalnego partnera w branży metalowej, który dostarczy Ci nie tylko wysokiej jakości produkty, ale również kompleksową obsługę i wsparcie na każdym etapie projektu - Stalumo jest dla Ciebie idealnym wyborem. Dołącz do grona zadowolonych klientów i przekonaj się, dlaczego Stalumo to gwarancja solidności, jakości i profesjonalizmu. <br /> <br /> Zapraszamy do współpracy!"
+  },
+  "Contact": {
+    "title": "Skontaktuj się z nami",
+    "homeTitle": "Strona główna",
+    "description": "Masz projekt na myśli? Skontaktuj się z nami przez formularz kontaktowy, a my odpowiemy jak najszybciej. Z przyjemnością pomożemy Ci w realizacji Twojego pomysłu, zapewniając fachową pomoc i najwyższą jakość wykonania. Czekamy na Twoje pytania i propozycje – razem stworzymy coś wyjątkowego!",
+    "button": "Wyślij wiadomość",
+    "topic": "Temat",
+    "email": "Adres e-mail",
+    "content": "O co chcesz nas zapytać ?",
+    "loading": "Ładowanie...",
+    "success": "Wiadomość została wysłana poprawnie. Odpowiemy jak najszybciej to możliwe na podany adres email.",
+    "error": "Coś poszło nie tak"
+  },
+  "Gallery": {
+    "title": "Galeria",
+    "homeTitle": "Strona główna"
+  },
+  "contactForm": {
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Envoyer"
+  },
+  "validation": {
+    "invalid": "Email invalide",
+    "required": "Nom requis",
+    "min": "Message requis pour être au moins 10 caractères"
+  }
+}
