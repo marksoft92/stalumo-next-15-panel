@@ -23,7 +23,7 @@ const items = [
   },
   {
     label: "Wiadomości",
-    route: "/news",
+    route: "/contact",
     icon: NewspaperIcon,
   },
   {

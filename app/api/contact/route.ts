@@ -3,53 +3,66 @@ import { NextRequest, NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-const verifyRecaptcha = async (token: string) => {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY!;
-  const response = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`,
-    { method: "POST" }
-  );
-  return response.json();
-};
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const page = parseInt(searchParams.get("page") || "1", 10);
+  const pageSize = 10;
 
-export async function POST(req: NextRequest) {
   try {
-    const { email, topic, content, recaptchaToken } = await req.json();
+    const offset = (page - 1) * pageSize;
 
-    if (!email || !topic || !content || !recaptchaToken) {
-      return new NextResponse(
-        JSON.stringify({ error: "All fields are required, including captcha" }),
-        { status: 400 }
-      );
-    }
-
-    // Weryfikacja reCAPTCHA
-    const captchaVerification = await verifyRecaptcha(recaptchaToken);
-    if (!captchaVerification.success || captchaVerification.score < 0.5) {
-      return new NextResponse(
-        JSON.stringify({ error: "Captcha verification failed" }),
-        { status: 400 }
-      );
-    }
-
-    // Zapis do bazy danych
-    const newChat = await prisma.clientChat.create({
-      data: {
-        email,
-        topic,
-        content,
-        read_me: false,
+    // Fetch data from the database using Prisma
+    const chats = await prisma.clientChat.findMany({
+      skip: offset,
+      take: pageSize,
+      orderBy: {
+        createdAt: "desc",
       },
     });
 
-    return new NextResponse(
-      JSON.stringify({ message: "Message sent successfully" }),
-      { status: 200 }
-    );
+    // If no chats found
+    if (chats.length === 0) {
+      return new NextResponse(JSON.stringify({ error: "No chats found" }), {
+        status: 404,
+      });
+    }
+
+    return new NextResponse(JSON.stringify({ chats }), { status: 200 });
   } catch (error) {
-    console.error("Error saving chat:", error);
+    console.error("Error fetching chats:", error);
     return new NextResponse(
-      JSON.stringify({ error: "Failed to send message" }),
+      JSON.stringify({ error: "Failed to fetch chats" }),
+      { status: 500 }
+    );
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
+export async function DELETE(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const id = parseInt(searchParams.get("id") || "0", 10);
+
+  try {
+    // Delete chat from the database using Prisma
+    const deletedChat = await prisma.clientChat.delete({
+      where: { id },
+    });
+
+    // If no chat found
+    if (!deletedChat) {
+      return new NextResponse(JSON.stringify({ error: "Chat not found" }), {
+        status: 404,
+      });
+    }
+
+    return new NextResponse(JSON.stringify({ message: "Chat deleted" }), {
+      status: 200,
+    });
+  } catch (error) {
+    console.error("Error deleting chat:", error);
+    return new NextResponse(
+      JSON.stringify({ error: "Failed to delete chat" }),
       { status: 500 }
     );
   } finally {
