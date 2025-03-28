@@ -13,6 +13,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Image {
+  id      Int     @id @default(autoincrement())
+  url     String
+  alt     String
+}
+
 model Blog {
   id      Int     @id @default(autoincrement())
   imgUrl  String
@@ -41,3 +47,4 @@ model ClientChat {
   reply     String?
   createdAt DateTime @default(now())  
 }
+
