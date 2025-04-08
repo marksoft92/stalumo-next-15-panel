@@ -23,6 +23,7 @@ interface Image {
 
 interface ImagesResponse {
   images: Image[];
+  total?: any;
 }
 
 export default function GalleryPage() {
@@ -30,6 +31,7 @@ export default function GalleryPage() {
   const [loading, setLoading] = useState(false);
   const [openDialog, setOpenDialog] = useState(false);
   const [imageToDelete, setImageToDelete] = useState<number | null>(null);
+  const [pagination, setPagination] = useState({ page: 0, pageSize: 10 });
 
   const handleDeleteClick = (imageId: number) => {
     setImageToDelete(imageId);
@@ -91,7 +93,9 @@ export default function GalleryPage() {
   const fetchImages = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/gallery");
+      const response = await axios.get(
+        `/api/gallery?page=${pagination.page + 1}&limit=${pagination.pageSize}`
+      );
       setImages(response.data);
     } catch (error) {
       console.error("Error fetching images", error);
@@ -102,7 +106,7 @@ export default function GalleryPage() {
 
   useEffect(() => {
     fetchImages();
-  }, []);
+  }, [pagination]);
 
   return (
     <Container>
@@ -110,15 +114,17 @@ export default function GalleryPage() {
         <h2 className="text-[2rem] flex items-end">Lista zdjęć galeria</h2>
         <ButtonCustom title="Dodaj zdjęcie" href="/gallery/new" />
       </div>
-      <Paper sx={{ height: "100%", margin: "2rem", padding: "2rem" }}>
+      <Paper sx={{ margin: "2rem", padding: "2rem" }}>
         <DataGrid
           rows={images.images}
           columns={columns}
           loading={loading}
           pageSizeOptions={[10]}
+          paginationModel={pagination}
           paginationMode="server"
+          rowCount={images?.total}
           sx={{ border: 0 }}
-          rowCount={images.images.length}
+          onPaginationModelChange={setPagination}
         />
       </Paper>
 

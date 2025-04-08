@@ -46,7 +46,7 @@ const SideMenu = () => {
         className="flex flex-row gap-10 text-center items-center hover:bg-[] w-full p-6"
       >
         <Image
-          src="/assets/images/stalumo.png"
+          src="http://panel.stalumo.pl/image-public-uploads/271064a1-be0d-4065-ad60-59cf4bae69cc-siemens-eq6-plus.png"
           width={145}
           height={113}
           alt="Logo Stalumo"

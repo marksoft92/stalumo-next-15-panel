@@ -1,72 +1,108 @@
-import { PrismaClient } from "@prisma/client";
-import { NextRequest } from "next/server";
-import { redirect } from "next/navigation";
+import { PrismaClient, BlogTranslation } from "@prisma/client";
+import { NextRequest, NextResponse } from "next/server";
 const prisma = new PrismaClient();
 
 interface BlogContent {
-  slug: string;
-  title: string;
-  content: string;
-  lang: string;
+  id: number;
+  imgUrl: string;
+  alt: string;
+  translations: {
+    [lang: string]: {
+      slug: string;
+      title: string;
+      content: string;
+    } | null;
+  };
 }
 
 export async function GET(req: NextRequest, { params }: { params: any }) {
-  const { searchParams } = new URL(req.url);
-  const lang = searchParams.get("lang") || "en"; // Domyślny język angielski
-  const slug = params.slug; // Slug pobrany z URL
+  const id = parseInt(params.slug); // ID pobrany z URL
 
   try {
-    // Zapytanie do bazy danych, aby znaleźć post na podstawie sluga i języka
-    const post = await prisma.blogTranslation.findFirst({
+    // Zapytanie do bazy danych, aby znaleźć post na podstawie id
+    const post = await prisma.blog.findFirst({
       where: {
-        slug,
-        // lang,
+        id, // Szukamy po id bloga
       },
       include: {
-        blog: true, // Uwzględnij dane z głównego bloga (np. imgUrl, alt)
+        translations: true, // Zawsze pobieramy wszystkie tłumaczenia
       },
     });
 
     if (!post) {
-      return new Response(JSON.stringify({ error: "Post not found" }), {
-        status: 404,
-      });
+      return NextResponse.json({ error: "Post not found" }, { status: 404 });
     }
 
-    // Zwrócenie danych w odpowiednim języku
-    // const translatedPost: BlogContent = {
-    //   slug: post.slug,
-    //   title: post.title,
-    //   content: post.content,
-    //   lang: post.lang,
-    // };
+    // Zwrócenie danych
+    const blogContent: BlogContent = {
+      id: post.id,
+      imgUrl: post.imgUrl,
+      alt: post.alt,
+      translations: {
+        pl: post.translations.find((t) => t.lang === "pl") || null,
+        en: post.translations.find((t) => t.lang === "en") || null,
+        de: post.translations.find((t) => t.lang === "de") || null,
+      },
+    };
 
-    const translatedPost = await prisma.blogTranslation.findFirst({
-      where: {
-        blogId: post.blogId, // Szukamy wpisu o tym samym ID, ale w innym języku
-        lang,
+    return NextResponse.json(blogContent, { status: 200 });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: "Error fetching post" }, { status: 500 });
+  }
+}
+
+export async function PATCH(req: NextRequest) {
+  try {
+    // Pobieramy dane z body
+    const { id, imgUrl, alt, translations } = await req.json();
+    console.log("Received data:", { id, imgUrl, alt, translations });
+
+    // Najpierw usuwamy wszystkie tłumaczenia dla tego bloga
+    await prisma.blogTranslation.deleteMany({
+      where: { blogId: id },
+    });
+
+    // Następnie tworzymy nowe tłumaczenia
+    const createdTranslations = await prisma.blogTranslation.createMany({
+      data: translations.map((translation: any) => ({
+        blogId: id,
+        lang: translation.lang,
+        title: translation.title,
+        content: translation.content,
+        slug: translation.slug,
+      })),
+    });
+
+    // Aktualizujemy wpis w tabeli Blog
+    const updatedBlogPost = await prisma.blog.update({
+      where: { id },
+      data: {
+        imgUrl,
+        alt,
+      },
+      include: {
+        translations: true,
       },
     });
 
-    return new Response(
-      JSON.stringify({
-        id: post?.blog.id, // Pobierz id z głównej tabeli Blog
-        imgUrl: post?.blog.imgUrl,
-        alt: post?.blog.alt,
-        slug: translatedPost?.slug,
-        title: translatedPost?.title,
-        content: translatedPost?.content,
-        lang: translatedPost?.lang,
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      }
+    console.log("Updated blog post:", updatedBlogPost);
+
+    // Zwracamy odpowiedź, w tym zaktualizowany wpis
+    return NextResponse.json(
+      { message: "Post updated successfully!", data: updatedBlogPost },
+      { status: 200 }
     );
   } catch (error) {
-    console.error(error);
-    return new Response(JSON.stringify({ error: "Error fetching post" }), {
-      status: 500,
-    });
+    console.error("Detailed error:", error);
+    return NextResponse.json(
+      {
+        error: "Error updating blog post",
+        details: error instanceof Error ? error.message : "Unknown error",
+      },
+      { status: 500 }
+    );
+  } finally {
+    await prisma.$disconnect();
   }
 }

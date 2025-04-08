@@ -142,6 +142,7 @@ export default function ChatTable() {
           paginationMode="server"
           sx={{ border: 0 }}
           rowCount={chats?.total}
+          onRowClick={(params) => router.push(`/contact/${params.row.id}`)}
           getRowClassName={(params) =>
             !params.row.read_me ? "unread-row" : ""
           }
