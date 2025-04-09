@@ -1,12 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useRouter } from "next/navigation";
+import { useParams } from 'next/navigation';
+import Alert from "@mui/material/Alert";
 
-export default function ContactForm({ params }: { params: any }) {
-  const router = useRouter();
-  console.log(router);
-  const id = parseInt(params.id);
+export default function ContactForm() {
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState("");
+  const params = useParams();
+  const id = parseInt(params.id as string);
   const [reply, setReply] = useState("");
   const [chatData, setChatData] = useState({
     email: "",
@@ -35,13 +37,20 @@ export default function ContactForm({ params }: { params: any }) {
       const response = await axios.post(`/api/contact/${id}`, {
         read_me: !chatData.read_me,
         reply: reply,
+        email: chatData.email,
+        subject:chatData.topic,
       });
 
       if (response.status === 200) {
-        console.log("Chat updated successfully");
+        setSuccess(true);  // Ustaw sukces, jeśli status 200
+        setError("");      // Wyczyść ewentualny błąd
+      } else {
+        setSuccess(false);
+        setError("Coś poszło nie tak, spróbuj ponownie.");
       }
     } catch (error) {
-      console.error("Error updating chat", error);
+      setSuccess(false);
+      setError("Wystąpił błąd. Proszę spróbuj ponownie.");
     }
   };
 
@@ -77,16 +86,16 @@ export default function ContactForm({ params }: { params: any }) {
           </div>
         )}
       </div>
-
+      {(!chatData?.read_me && !success) &&
       <form onSubmit={handleSubmit} className="space-y-4">
         <label className="block">
           <span className="text-gray-700 font-medium">Odpowiedź:</span>
           <textarea
             value={reply}
             onChange={(e) => setReply(e.target.value)}
-            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-black"
             rows={4}
-            placeholder="Type your reply here..."
+            placeholder="Wpisz swoją odpowiedź tutaj..."
           />
         </label>
         <button
@@ -95,7 +104,11 @@ export default function ContactForm({ params }: { params: any }) {
         >
           Wyślij
         </button>
-      </form>
+      </form>}
+      {success && (
+          <Alert severity="success">Wiadomość wysłana poprawnie!</Alert>
+      )}
+      {error && <Alert severity="error">{error}</Alert>}
     </div>
   );
 }

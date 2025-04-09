@@ -2,12 +2,13 @@ import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
-
+import {mailContent} from "../../../../lib/emailContent"
+import Alert from '@mui/material/Alert';
 const prisma = new PrismaClient();
 
 export async function GET(req: NextRequest, { params }: { params: any }) {
   const id = parseInt(params.id); // ID pobrany z URL
-  console.log(1);
+
   try {
     // Zapytanie do bazy danych, aby znaleźć post na podstawie id
     const chat = await prisma.clientChat.findFirst({
@@ -33,7 +34,7 @@ export async function POST(req: NextRequest, { params }: { params: any }) {
 
   try {
     // Pobieramy dane z body
-    const { read_me, reply } = await req.json();
+    const { read_me, reply,email,subject } = await req.json();
 
     if (read_me) {
       // Aktualizujemy read_me na true
@@ -44,9 +45,12 @@ export async function POST(req: NextRequest, { params }: { params: any }) {
     }
 
     if (reply) {
+      const mailBody = mailContent(email,subject, reply);
+
+
       // Konfiguracja SMTP
       const transporter = nodemailer.createTransport({
-        service: "gmail",
+        // service: "gmail",
         host: process.env.SMTP_HOST,
         port: process.env.SMTP_PORT,
         secure: process.env.SMTP_SECURE === "true", // or 'STARTTLS'
@@ -59,9 +63,14 @@ export async function POST(req: NextRequest, { params }: { params: any }) {
       // Wysłanie maila
       await transporter.sendMail({
         from: process.env.SMTP_USER,
-        to: reply,
+        to: email,
         subject: "Odpowiedź na wiadomość",
         text: reply,
+        html: mailBody,
+      });
+      await prisma.clientChat.update({
+        where: { id },
+        data: { reply: reply, read_me: true  },
       });
     }
 
@@ -69,6 +78,7 @@ export async function POST(req: NextRequest, { params }: { params: any }) {
       { message: "Chat updated successfully" },
       { status: 200 }
     );
+
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: "Error updating chat" }, { status: 500 });

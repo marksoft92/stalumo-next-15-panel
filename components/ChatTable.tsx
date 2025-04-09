@@ -93,7 +93,9 @@ export default function ChatTable() {
       renderCell: (params) => (params.value ? "Tak" : "Nie"),
     },
     { field: "reply", headerName: "Odpowiedź", width: 200 },
-    { field: "createdAt", headerName: "Data utworzenia", width: 200 },
+    { field: "createdAt", headerName: "Data utworzenia", width: 200,
+    renderCell: (params) => (new Date(params.value).toLocaleString())
+    },
     {
       field: "actions",
       headerName: "Akcje",
@@ -114,7 +116,6 @@ export default function ChatTable() {
       const response = await axios.get(
         `/api/contact?page=${pagination.page + 1}&limit=${pagination.pageSize}`
       );
-
       setChats(response.data);
     } catch (error) {
       console.error("Błąd ładowania chatów", error);
@@ -128,7 +129,6 @@ export default function ChatTable() {
     fetchChats();
   }, [pagination]);
 
-  console.log(chats);
   return (
     <Container>
       <Paper sx={{ height: "100%", margin: "2rem", padding: "2rem" }}>

@@ -26,8 +26,9 @@ export async function GET(req: NextRequest) {
         status: 404,
       });
     }
+    const total = await prisma.clientChat.count();
 
-    return new NextResponse(JSON.stringify({ chats }), { status: 200 });
+    return new NextResponse(JSON.stringify({ chats,total }), { status: 200 });
   } catch (error) {
     console.error("Error fetching chats:", error);
     return new NextResponse(

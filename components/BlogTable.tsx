@@ -111,7 +111,6 @@ export default function BlogPageContainer() {
     fetchData();
   }, [pagination]);
 
-  console.log(posts);
   return (
     <Container>
       <Paper sx={{ height: "100%", margin: "2rem", padding: "2rem" }}>
