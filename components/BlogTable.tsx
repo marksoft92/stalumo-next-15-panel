@@ -56,7 +56,6 @@ export default function BlogPageContainer() {
     try {
       const response = await axios.delete(`/api/blog?id=${postToDelete}`);
       if (response.status === 200) {
-        console.log("Post successfully deleted");
         fetchData();
         handleCloseDialog();
       }
@@ -123,7 +122,7 @@ export default function BlogPageContainer() {
           onPaginationModelChange={setPagination}
           paginationMode="server"
           sx={{ border: 0 }}
-          rowCount={posts?.total}
+          rowCount={posts?.total|| 0}
           onCellClick={(params, event) => {
             if (params.field === 'actions') {
               event.stopPropagation();

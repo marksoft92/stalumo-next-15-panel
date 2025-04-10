@@ -56,7 +56,7 @@ export async function PATCH(req: NextRequest) {
   try {
     // Pobieramy dane z body
     const { id, imgUrl, alt, translations } = await req.json();
-    console.log("Received data:", { id, imgUrl, alt, translations });
+
 
     // Najpierw usuwamy wszystkie tłumaczenia dla tego bloga
     await prisma.blogTranslation.deleteMany({
@@ -86,7 +86,7 @@ export async function PATCH(req: NextRequest) {
       },
     });
 
-    console.log("Updated blog post:", updatedBlogPost);
+
 
     // Zwracamy odpowiedź, w tym zaktualizowany wpis
     return NextResponse.json(

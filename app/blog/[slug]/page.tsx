@@ -3,6 +3,7 @@ import Container from "@/components/ui/container";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Alert from "@mui/material/Alert";
+import {useParams} from "next/navigation";
 
 
 
@@ -25,7 +26,9 @@ interface BlogPost {
   };
 }
 
-const ArticlePageContainer = ({ params }: { params: any }) => {
+const ArticlePageContainer = () => {
+  const params = useParams();
+
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
@@ -43,7 +46,6 @@ const ArticlePageContainer = ({ params }: { params: any }) => {
       try {
         const response = await axios.get(`/api/blog/${params?.slug}`);
         const data: BlogPost = response.data;
-        console.log("API Response:", data);
 
         setFormData((prevFormData) => ({
           imgUrl: data.imgUrl,
@@ -112,7 +114,7 @@ const ArticlePageContainer = ({ params }: { params: any }) => {
         ],
       };
 
-      console.log("Sending data:", postData); // Dodajemy log do debugowania
+
       const response = await axios.patch(`/api/blog/${params.slug}`, postData);
       if (response.status === 200) {
         setSuccess(true);

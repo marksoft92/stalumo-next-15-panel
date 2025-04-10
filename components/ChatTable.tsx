@@ -56,7 +56,6 @@ export default function ChatTable() {
     try {
       const response = await axios.delete(`/api/contact?id=${chatToDelete}`);
       if (response.status === 200) {
-        console.log("Chat successfully deleted");
         fetchChats();
         handleCloseDialog();
       }
@@ -141,7 +140,7 @@ export default function ChatTable() {
           onPaginationModelChange={setPagination}
           paginationMode="server"
           sx={{ border: 0 }}
-          rowCount={chats?.total}
+          rowCount={chats?.total || 0}
           onCellClick={(params, event) => {
             if (params.field === 'actions') {
               event.stopPropagation();

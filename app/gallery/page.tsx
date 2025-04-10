@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import Container from "@/components/ui/container";
 import axios from "axios";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
@@ -50,7 +49,6 @@ export default function GalleryPage() {
     try {
       const response = await axios.delete(`/api/gallery?id=${imageToDelete}`);
       if (response.status === 200) {
-        console.log("Image successfully deleted");
         fetchImages();
         handleCloseDialog();
       }
@@ -121,8 +119,8 @@ export default function GalleryPage() {
           loading={loading}
           pageSizeOptions={[10]}
           paginationModel={pagination}
-          paginationMode="server"
-          rowCount={images?.total}
+          paginationMode='server'
+          rowCount={images?.total || 0}
           sx={{ border: 0 }}
           onPaginationModelChange={setPagination}
         />
