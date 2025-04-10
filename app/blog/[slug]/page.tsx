@@ -2,8 +2,9 @@
 import Container from "@/components/ui/container";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Alert from "@mui/material/Alert";
 
-// Funkcja do pobierania danych artykułów i aktualizacji za pomocą API
+
 
 interface Translation {
   blogId: number;
@@ -25,6 +26,8 @@ interface BlogPost {
 }
 
 const ArticlePageContainer = ({ params }: { params: any }) => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     imgUrl: "",
     alt: "",
@@ -76,7 +79,7 @@ const ArticlePageContainer = ({ params }: { params: any }) => {
 
     fetchData();
   }, [params]);
-  console.log("x", formData);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -111,9 +114,16 @@ const ArticlePageContainer = ({ params }: { params: any }) => {
 
       console.log("Sending data:", postData); // Dodajemy log do debugowania
       const response = await axios.patch(`/api/blog/${params.slug}`, postData);
-      console.log("Article updated successfully", response.data);
+      if (response.status === 200) {
+        setSuccess(true);
+        setError("");
+      } else {
+        setSuccess(false);
+        setError("Coś poszło nie tak, spróbuj ponownie.");
+      }
     } catch (error) {
       console.error("Error updating article", error);
+      setError("Wystąpił błąd. Proszę spróbuj ponownie.");
     }
   };
 
@@ -146,9 +156,9 @@ const ArticlePageContainer = ({ params }: { params: any }) => {
       .replace(/^-+/, "")
       .replace(/-+$/, "");
   };
-  console.log(formData.translations, formData.translations["pl"].title);
+
   return (
-    <Container>
+    <div className="container mx-auto p-6 max-w-[50%]">
       <form onSubmit={handleSubmit}>
         {/* Dynamic Title and Content for PL, EN, DE */}
         {(["pl", "en", "de"] as const).map((lang) => (
@@ -222,13 +232,17 @@ const ArticlePageContainer = ({ params }: { params: any }) => {
         <div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
+            className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 my-5"
           >
             Zaktualizuj wpis na bloga
           </button>
         </div>
       </form>
-    </Container>
+      {success && (
+          <Alert className="my-10" severity="success">Wpis na bloga został zaktualizowany</Alert>
+      )}
+      {error && <Alert className="my-10" severity="error">{error}</Alert>}
+    </div>
   );
 };
 

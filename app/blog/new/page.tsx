@@ -2,6 +2,7 @@
 
 import Container from "@/components/ui/container";
 import React, { useState } from "react";
+import Alert from "@mui/material/Alert";
 
 // Typy dla danych formularza
 interface BlogTranslation {
@@ -22,6 +23,8 @@ interface FormData {
 }
 
 const BlogPostForm = () => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState<FormData>({
     imgUrl: "",
     alt: "",
@@ -96,8 +99,8 @@ const BlogPostForm = () => {
       const data = await response.json();
 
       if (response.ok) {
-        alert("Post created successfully!");
-        // Reset form
+        setSuccess(true);  // Ustaw sukces, jeśli status 200
+        setError("");      // Wyczyść ewentualny błąd
         setFormData({
           imgUrl: "",
           alt: "",
@@ -108,7 +111,8 @@ const BlogPostForm = () => {
           },
         });
       } else {
-        alert("Error creating post: " + data.error);
+        setSuccess(false);
+        setError("Coś poszło nie tak, spróbuj ponownie.");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -201,7 +205,12 @@ const BlogPostForm = () => {
             </button>
           </div>
         </form>
+        {success && (
+            <Alert className="my-10" severity="success">Wpis na bloga został dodany poprawnie!</Alert>
+        )}
+        {error && <Alert className="my-10" severity="error">{error}</Alert>}
       </div>
+
     </Container>
   );
 };

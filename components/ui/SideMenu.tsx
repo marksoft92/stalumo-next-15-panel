@@ -28,7 +28,7 @@ const items = [
   },
   {
     label: "Statystyki",
-    route: "/stats",
+    route: "https://analytics.google.com/analytics/web/",
     icon: BarChartIcon,
   },
   {
@@ -57,6 +57,7 @@ const SideMenu = () => {
         <Link
           key={item.route}
           href={item.route}
+          target={item.route.startsWith('h') ? "_blank" : ""}
           className="flex flex-row gap-10 text-center items-center hover:bg-[] w-full p-6 opacity-100 hover:opacity-50 transition duration-30"
         >
           <div>

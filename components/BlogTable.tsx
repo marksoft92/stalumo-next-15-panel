@@ -124,7 +124,14 @@ export default function BlogPageContainer() {
           paginationMode="server"
           sx={{ border: 0 }}
           rowCount={posts?.total}
-          onRowClick={(params) => router.push(`/blog/${params.row.id}`)}
+          onCellClick={(params, event) => {
+            if (params.field === 'actions') {
+              event.stopPropagation();
+              return;
+            }
+
+            router.push(`/blog/${params.row.id}`);
+          }}
         />
       </Paper>
 
