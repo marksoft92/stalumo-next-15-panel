@@ -13,7 +13,8 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
 import Image from "next/image";
 import ButtonCustom from "@/components/ui/button";
-
+import { IconButton, Tooltip } from "@mui/material";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 interface Image {
   id: number;
   url: string;
@@ -63,7 +64,7 @@ export default function GalleryPage() {
     { field: "id", headerName: "ID", width: 70 },
     {
       field: "url",
-      headerName: "URL",
+      headerName: "Miniaturka",
       width: 200,
       renderCell: (params) => (
         <Image
@@ -75,6 +76,28 @@ export default function GalleryPage() {
       ),
     },
     { field: "alt", headerName: "ALT", width: 200 },
+    {
+      headerName: "URL",
+      field: "url-name",
+      width: 300,
+      renderCell: (params) => {
+        const handleCopy = () => {
+          navigator.clipboard.writeText(params.row.url);
+        };
+
+        return (
+          <div style={{ display: "flex", alignItems: "center" }}>
+
+            <Tooltip title="Kopiuj">
+              <IconButton onClick={handleCopy} size="small">
+                <ContentCopyIcon fontSize="small" />
+              </IconButton>
+            </Tooltip>
+            <p style={{ marginRight: 8 }}>{params.row.url}</p>
+          </div>
+        );
+      }
+    },
     {
       field: "actions",
       headerName: "Akcje",
@@ -107,47 +130,48 @@ export default function GalleryPage() {
   }, [pagination]);
 
   return (
-    <Container>
-      <div className="p-10 flex flex-row text-center algin-center justify-center gap-10">
-        <h2 className="text-[2rem] flex items-end">Lista zdjęć galeria</h2>
-        <ButtonCustom title="Dodaj zdjęcie" href="/gallery/new" />
-      </div>
-      <Paper sx={{ margin: "2rem", padding: "2rem" }}>
-        <DataGrid
-          rows={images.images}
-          columns={columns}
-          loading={loading}
-          pageSizeOptions={[10]}
-          paginationModel={pagination}
-          paginationMode='server'
-          rowCount={images?.total || 0}
-          sx={{ border: 0 }}
-          onPaginationModelChange={setPagination}
-        />
-      </Paper>
+    <>
+      <Container>
+        <div className="p-10 flex flex-row text-center algin-center justify-center gap-10">
+          <h2 className="text-[2rem] flex items-end">Lista zdjęć galeria</h2>
+          <ButtonCustom title="Dodaj zdjęcie" href="/gallery/new" />
+        </div>
+        <Paper sx={{ margin: "2rem", padding: "2rem" }}>
+          <DataGrid
+            rows={images.images}
+            columns={columns}
+            loading={loading}
+            pageSizeOptions={[10]}
+            paginationModel={pagination}
+            paginationMode='server'
+            rowCount={images?.total || 0}
+            sx={{ border: 0 }}
+            onPaginationModelChange={setPagination}
+          />
+        </Paper>
 
-      <Dialog
-        open={openDialog}
-        onClose={handleCloseDialog}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {"Potwierdź usunięcie"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Czy na pewno chcesz usunąć to zdjęcie? Tej operacji nie można
-            cofnąć.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseDialog}>Anuluj</Button>
-          <Button onClick={deleteImage} color="error" autoFocus>
-            Usuń
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </Container>
+        <Dialog
+          open={openDialog}
+          onClose={handleCloseDialog}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">
+            {"Potwierdź usunięcie"}
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              Czy na pewno chcesz usunąć to zdjęcie? Tej operacji nie można
+              cofnąć.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseDialog}>Anuluj</Button>
+            <Button onClick={deleteImage} color="error" autoFocus>
+              Usuń
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </Container></>
   );
 }

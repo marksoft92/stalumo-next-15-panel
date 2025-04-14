@@ -34,62 +34,64 @@ const SearchForm = () => {
     };
 
     return (
-        <div className="p-6  bg-white rounded-md shadow-md">
-            <h2 className='text-black'>max 100 zapytań miesięcznie</h2>
-            <div className="mb-4">
-                <label htmlFor="country" className="block text-sm font-medium text-gray-700">Wybierz kraj</label>
-                <select
-                    id="country"
-                    value={selectedCountry}
-                    onChange={handleCountryChange}
-                    className="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-black"
-                >
-                    {countries.map((country) => (
-                        <option key={country.value} value={country.value}>
-                            {country.label}
-                        </option>
-                    ))}
-                </select>
-            </div>
-
-            <div className="mb-4">
-                <label htmlFor="searchQuery" className="block text-sm font-medium text-gray-700 text-black">Twoje słowa kluczowe</label>
-                <input
-                    type="text"
-                    id="searchQuery"
-                    value={searchQuery}
-                    onChange={handleSearchChange}
-                    className="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-black"
-                    placeholder="Enter search term"
-                />
-            </div>
-
-            <button
-                onClick={handleSubmit}
-                className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 text-black"
-            >
-                Pobierz trend dla słów kluczowych
-            </button>
-
-            {result && (
-                <div className="mt-4 p-4 bg-gray-100 rounded-md">
-                    <pre className="whitespace-pre-wrap break-words text-black">
-                        <h3 className='text-[1.8rem] '>Trendujące wyszukiwania w google</h3>
-                        {result?.related_searches?.map((v: any, index: number) => (
-                            <p key={index}>{v?.query}</p>
+        <section className="p-6 space-y-6">
+            <div className='bg-white dark:bg-zinc-900 rounded-2xl shadow p-6'>
+                <h2 className='text-black'>max 100 zapytań miesięcznie</h2>
+                <div className="mb-4">
+                    <label htmlFor="country" className="block text-sm font-medium text-gray-700">Wybierz kraj</label>
+                    <select
+                        id="country"
+                        value={selectedCountry}
+                        onChange={handleCountryChange}
+                        className="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-black"
+                    >
+                        {countries.map((country) => (
+                            <option key={country.value} value={country.value}>
+                                {country.label}
+                            </option>
                         ))}
-                    </pre>
-                    <pre className="whitespace-pre-wrap break-words text-black">
-                        <h3 className='text-[1.8rem] '>Trendujące zapytania i odpowiedzi w google</h3>
-                        {result?.related_questions?.map((v: any, index: number) => (
-                            <>                            <p key={index}>{v?.question}</p>
-                                <p key={index + v.snippet}>{v?.snippet}</p></>
-                        ))}
-                    </pre>
-                    W
+                    </select>
                 </div>
-            )}
-        </div>
+
+                <div className="mb-4">
+                    <label htmlFor="searchQuery" className="block text-sm font-medium text-gray-700 text-black">Twoje słowa kluczowe</label>
+                    <input
+                        type="text"
+                        id="searchQuery"
+                        value={searchQuery}
+                        onChange={handleSearchChange}
+                        className="mt-1 block w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-black"
+                        placeholder="Enter search term"
+                    />
+                </div>
+
+                <button
+                    onClick={handleSubmit}
+                    className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 text-black"
+                >
+                    Pobierz trend dla słów kluczowych
+                </button>
+
+                {result && (
+                    <div className="mt-4 p-4 bg-gray-100 rounded-md">
+                        <pre className="whitespace-pre-wrap break-words text-black">
+                            <h3 className='text-[1.8rem] '>Trendujące wyszukiwania w google</h3>
+                            {result?.related_searches?.map((v: any, index: number) => (
+                                <p key={index}>{v?.query}</p>
+                            ))}
+                        </pre>
+                        <pre className="whitespace-pre-wrap break-words text-black">
+                            <h3 className='text-[1.8rem] '>Trendujące zapytania i odpowiedzi w google</h3>
+                            {result?.related_questions?.map((v: any, index: number) => (
+                                <>                            <p key={index}>{v?.question}</p>
+                                    <p key={index + v.snippet}>{v?.snippet}</p></>
+                            ))}
+                        </pre>
+                        W
+                    </div>
+                )}
+            </div>
+        </section>
     );
 };
 

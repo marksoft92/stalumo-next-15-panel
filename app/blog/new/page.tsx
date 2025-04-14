@@ -3,7 +3,6 @@
 import Container from "@/components/ui/container";
 import React, { useState } from "react";
 import Alert from "@mui/material/Alert";
-
 // Typy dla danych formularza
 interface BlogTranslation {
   title: string;
@@ -121,97 +120,98 @@ const BlogPostForm = () => {
   };
 
   return (
-    <Container>
-      <div className="container mx-auto p-6 max-w-[50%]">
-        <h1 className="text-2xl font-bold mb-6">Nowy wpis na Bloga</h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Image URL and Alt */}
-          <div>
-            <label htmlFor="imgUrl" className="block text-lg font-medium">
-              Sciezka do zdjęcia:
-            </label>
-            <input
-              type="url"
-              id="imgUrl"
-              value={formData.imgUrl}
-              onChange={(e) =>
-                setFormData({ ...formData, imgUrl: e.target.value })
-              }
-              className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
-              required
-            />
-          </div>
-
-          <div>
-            <label htmlFor="alt" className="block text-lg font-medium">
-              Alt zdjęcia:
-            </label>
-            <input
-              type="text"
-              id="alt"
-              value={formData.alt}
-              onChange={(e) =>
-                setFormData({ ...formData, alt: e.target.value })
-              }
-              className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
-              required
-            />
-          </div>
-
-          {/* Dynamic Title and Content for PL, EN, DE */}
-          {(["pl", "en", "de"] as const).map((lang) => (
-            <div key={lang}>
-              <div>
-                <label
-                  htmlFor={`title${lang.toUpperCase()}`}
-                  className="block text-lg font-medium"
-                >
-                  Tytuł ({lang.toUpperCase()}):
-                </label>
-                <input
-                  type="text"
-                  id={`title${lang.toUpperCase()}`}
-                  value={formData.translations[lang].title}
-                  onChange={(e) => handleChange(e, lang, "title")}
-                  className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor={`content${lang.toUpperCase()}`}
-                  className="block text-lg font-medium"
-                >
-                  Treść wpisu ({lang.toUpperCase()}):
-                </label>
-                <textarea
-                  id={`content${lang.toUpperCase()}`}
-                  value={formData.translations[lang].content}
-                  onChange={(e) => handleChange(e, lang, "content")}
-                  className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
-                  required
-                />
-              </div>
+    <>
+      <Container>
+        <div className="container mx-auto p-6 max-w-[50%]">
+          <h1 className="text-2xl font-bold mb-6">Nowy wpis na Bloga</h1>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Image URL and Alt */}
+            <div>
+              <label htmlFor="imgUrl" className="block text-lg font-medium">
+                Sciezka do zdjęcia:
+              </label>
+              <input
+                type="url"
+                id="imgUrl"
+                value={formData.imgUrl}
+                onChange={(e) =>
+                  setFormData({ ...formData, imgUrl: e.target.value })
+                }
+                className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
+                required
+              />
             </div>
-          ))}
 
-          {/* Submit Button */}
-          <div>
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
-            >
-              Stwórz nowy wpis na bloga
-            </button>
-          </div>
-        </form>
-        {success && (
+            <div>
+              <label htmlFor="alt" className="block text-lg font-medium">
+                Alt zdjęcia:
+              </label>
+              <input
+                type="text"
+                id="alt"
+                value={formData.alt}
+                onChange={(e) =>
+                  setFormData({ ...formData, alt: e.target.value })
+                }
+                className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
+                required
+              />
+            </div>
+
+            {/* Dynamic Title and Content for PL, EN, DE */}
+            {(["pl", "en", "de"] as const).map((lang) => (
+              <div key={lang}>
+                <div>
+                  <label
+                    htmlFor={`title${lang.toUpperCase()}`}
+                    className="block text-lg font-medium"
+                  >
+                    Tytuł ({lang.toUpperCase()}):
+                  </label>
+                  <input
+                    type="text"
+                    id={`title${lang.toUpperCase()}`}
+                    value={formData.translations[lang].title}
+                    onChange={(e) => handleChange(e, lang, "title")}
+                    className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor={`content${lang.toUpperCase()}`}
+                    className="block text-lg font-medium"
+                  >
+                    Treść wpisu ({lang.toUpperCase()}):
+                  </label>
+                  <textarea
+                    id={`content${lang.toUpperCase()}`}
+                    value={formData.translations[lang].content}
+                    onChange={(e) => handleChange(e, lang, "content")}
+                    className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
+                    required
+                  />
+                </div>
+              </div>
+            ))}
+
+            {/* Submit Button */}
+            <div>
+              <button
+                type="submit"
+                className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
+              >
+                Stwórz nowy wpis na bloga
+              </button>
+            </div>
+          </form>
+          {success && (
             <Alert className="my-10" severity="success">Wpis na bloga został dodany poprawnie!</Alert>
-        )}
-        {error && <Alert className="my-10" severity="error">{error}</Alert>}
-      </div>
+          )}
+          {error && <Alert className="my-10" severity="error">{error}</Alert>}
+        </div>
 
-    </Container>
+      </Container></>
   );
 };
 

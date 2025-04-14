@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Paper from "@mui/material/Paper";
-import Container from "@/components/ui/container";
 import axios from "axios";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Dialog from "@mui/material/Dialog";
@@ -111,7 +110,7 @@ export default function BlogPageContainer() {
   }, [pagination]);
 
   return (
-    <Container>
+    <>
       <Paper sx={{ height: "100%", margin: "2rem", padding: "2rem" }}>
         <DataGrid
           rows={posts?.posts}
@@ -122,7 +121,7 @@ export default function BlogPageContainer() {
           onPaginationModelChange={setPagination}
           paginationMode="server"
           sx={{ border: 0 }}
-          rowCount={posts?.total|| 0}
+          rowCount={posts?.total || 0}
           onCellClick={(params, event) => {
             if (params.field === 'actions') {
               event.stopPropagation();
@@ -155,6 +154,6 @@ export default function BlogPageContainer() {
           </Button>
         </DialogActions>
       </Dialog>
-    </Container>
+    </>
   );
 }

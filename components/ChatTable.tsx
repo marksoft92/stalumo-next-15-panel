@@ -92,8 +92,9 @@ export default function ChatTable() {
       renderCell: (params) => (params.value ? "Tak" : "Nie"),
     },
     { field: "reply", headerName: "Odpowiedź", width: 200 },
-    { field: "createdAt", headerName: "Data utworzenia", width: 200,
-    renderCell: (params) => (new Date(params.value).toLocaleString())
+    {
+      field: "createdAt", headerName: "Data utworzenia", width: 200,
+      renderCell: (params) => (new Date(params.value).toLocaleString())
     },
     {
       field: "actions",
@@ -129,7 +130,7 @@ export default function ChatTable() {
   }, [pagination]);
 
   return (
-    <Container>
+    <>
       <Paper sx={{ height: "100%", margin: "2rem", padding: "2rem" }}>
         <DataGrid
           rows={chats?.chats}
@@ -182,6 +183,6 @@ export default function ChatTable() {
           </Button>
         </DialogActions>
       </Dialog>
-    </Container>
+    </>
   );
 }

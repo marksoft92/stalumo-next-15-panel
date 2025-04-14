@@ -3,7 +3,7 @@ import Container from "@/components/ui/container";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Alert from "@mui/material/Alert";
-import {useParams} from "next/navigation";
+import { useParams } from "next/navigation";
 
 
 
@@ -12,7 +12,7 @@ interface Translation {
   lang: string;
   title: string;
   content: string;
-  slug: string;
+  slug: any;
 }
 
 interface BlogPost {
@@ -27,7 +27,7 @@ interface BlogPost {
 }
 
 const ArticlePageContainer = () => {
-  const params = useParams();
+  const params: any = useParams();
 
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
@@ -52,7 +52,7 @@ const ArticlePageContainer = () => {
           alt: data.alt,
           translations: {
             en: data.translations.en || {
-              blogId: parseInt(params.slug),
+              blogId: parseInt(params?.slug),
               title: "",
               content: "",
               lang: "en",
@@ -160,91 +160,92 @@ const ArticlePageContainer = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 max-w-[50%]">
-      <form onSubmit={handleSubmit}>
-        {/* Dynamic Title and Content for PL, EN, DE */}
-        {(["pl", "en", "de"] as const).map((lang) => (
-          <div key={lang}>
-            <div>
-              <label
-                htmlFor={`title${lang.toUpperCase()}`}
-                className="block text-lg font-medium"
-              >
-                Tytuł ({lang.toUpperCase()}):
-              </label>
-              <input
-                type="text"
-                id={`title${lang.toUpperCase()}`}
-                value={formData.translations[lang].title}
-                onChange={(e) => handleChange(e, lang, "title")}
-                className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
-                required
-              />
+    <Container>
+      <div className="container mx-auto p-6 max-w-[50%]">
+        <form onSubmit={handleSubmit}>
+          {/* Dynamic Title and Content for PL, EN, DE */}
+          {(["pl", "en", "de"] as const).map((lang) => (
+            <div key={lang}>
+              <div>
+                <label
+                  htmlFor={`title${lang.toUpperCase()}`}
+                  className="block text-lg font-medium"
+                >
+                  Tytuł ({lang.toUpperCase()}):
+                </label>
+                <input
+                  type="text"
+                  id={`title${lang.toUpperCase()}`}
+                  value={formData.translations[lang].title}
+                  onChange={(e) => handleChange(e, lang, "title")}
+                  className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor={`content${lang.toUpperCase()}`}
+                  className="block text-lg font-medium"
+                >
+                  Treść wpisu ({lang.toUpperCase()}):
+                </label>
+                <textarea
+                  id={`content${lang.toUpperCase()}`}
+                  value={formData.translations[lang].content}
+                  onChange={(e) => handleChange(e, lang, "content")}
+                  className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
+                  required
+                />
+              </div>
             </div>
-            <div>
-              <label
-                htmlFor={`content${lang.toUpperCase()}`}
-                className="block text-lg font-medium"
-              >
-                Treść wpisu ({lang.toUpperCase()}):
-              </label>
-              <textarea
-                id={`content${lang.toUpperCase()}`}
-                value={formData.translations[lang].content}
-                onChange={(e) => handleChange(e, lang, "content")}
-                className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
-                required
-              />
-            </div>
+          ))}
+
+          {/* Image URL and Alt */}
+          <div>
+            <label htmlFor="imgUrl" className="block text-lg font-medium">
+              Sciezka do zdjęcia:
+            </label>
+            <input
+              type="url"
+              id="imgUrl"
+              value={formData.imgUrl}
+              onChange={(e) =>
+                setFormData({ ...formData, imgUrl: e.target.value })
+              }
+              className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
+              required
+            />
           </div>
-        ))}
 
-        {/* Image URL and Alt */}
-        <div>
-          <label htmlFor="imgUrl" className="block text-lg font-medium">
-            Sciezka do zdjęcia:
-          </label>
-          <input
-            type="url"
-            id="imgUrl"
-            value={formData.imgUrl}
-            onChange={(e) =>
-              setFormData({ ...formData, imgUrl: e.target.value })
-            }
-            className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
-            required
-          />
-        </div>
+          <div>
+            <label htmlFor="alt" className="block text-lg font-medium">
+              Alt zdjęcia:
+            </label>
+            <input
+              type="text"
+              id="alt"
+              value={formData.alt}
+              onChange={(e) => setFormData({ ...formData, alt: e.target.value })}
+              className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="alt" className="block text-lg font-medium">
-            Alt zdjęcia:
-          </label>
-          <input
-            type="text"
-            id="alt"
-            value={formData.alt}
-            onChange={(e) => setFormData({ ...formData, alt: e.target.value })}
-            className="w-full p-2 border border-gray-300 rounded-md text-[#000]"
-            required
-          />
-        </div>
-
-        {/* Submit Button */}
-        <div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 my-5"
-          >
-            Zaktualizuj wpis na bloga
-          </button>
-        </div>
-      </form>
-      {success && (
+          {/* Submit Button */}
+          <div>
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 my-5"
+            >
+              Zaktualizuj wpis na bloga
+            </button>
+          </div>
+        </form>
+        {success && (
           <Alert className="my-10" severity="success">Wpis na bloga został zaktualizowany</Alert>
-      )}
-      {error && <Alert className="my-10" severity="error">{error}</Alert>}
-    </div>
+        )}
+        {error && <Alert className="my-10" severity="error">{error}</Alert>}
+      </div></Container>
   );
 };
 

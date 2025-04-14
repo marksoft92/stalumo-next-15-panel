@@ -40,13 +40,13 @@ const items = [
 
 const SideMenu = () => {
   return (
-    <div className="max-w-[20%] flex flex-col bg-[#212121] h-[100vh] gap-10">
+    <div className=" flex flex-col bg-[#212121]  gap-1">
       <Link
         href="/"
-        className="flex flex-row gap-10 text-center items-center hover:bg-[] w-full p-6"
+        className="flex flex-row gap-1 text-center items-center hover:bg-[] w-full p-6"
       >
         <Image
-          src="http://panel.stalumo.pl/image-public-uploads/271064a1-be0d-4065-ad60-59cf4bae69cc-siemens-eq6-plus.png"
+          src="/assets/images/stalumo.png"
           width={145}
           height={113}
           alt="Logo Stalumo"

@@ -1,7 +1,7 @@
+"use client"
 import localFont from "next/font/local";
-
+import { SessionProvider } from "next-auth/react";
 import "./globals.css";
-import SideMenu from "@/components/ui/SideMenu";
 
 const oswaldVariable = localFont({
   src: "./fonts/Oswald-VariableFont_wght.ttf",
@@ -20,8 +20,10 @@ export default async function RootLayout({
         className={`${oswaldVariable.variable} antialiased flex flex-row`}
         style={{ fontFamily: "var(--font-oswald), sans-serif" }}
       >
-        <SideMenu />
-        {children}
+        <SessionProvider>
+        
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );
