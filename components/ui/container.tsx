@@ -6,7 +6,7 @@ interface ContainerProps {
 }
 
 const Container: React.FC<ContainerProps> = ({ children, className }) => {
-  return <div className="w-full flex">
+  return <div className="w-full flex min-h-[100vh]">
     <SideMenu />
     <div className=" flex flex-col w-full max-w-[85%]">
       {children}

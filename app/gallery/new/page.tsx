@@ -1,4 +1,5 @@
 "use client";
+import Container from "@/components/ui/container";
 import { useState } from "react";
 
 export default function Dashboard() {
@@ -29,7 +30,8 @@ export default function Dashboard() {
   };
 
   return (
-    <>   
+
+    <Container>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 w-full">
         <div className="bg-white shadow-xl rounded-2xl p-8 w-full ">
           <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
@@ -67,6 +69,6 @@ export default function Dashboard() {
             </button>
           </form>
         </div>
-      </div></>
+      </div></Container>
   );
 }
