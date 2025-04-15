@@ -81,15 +81,15 @@ export default function GalleryPage() {
       field: "url-name",
       width: 300,
       renderCell: (params) => {
-        const handleCopy = () => {
-          navigator.clipboard.writeText(params.row.url);
+        const handleCopy = (url) => {
+          navigator.clipboard?.writeText(url);
         };
 
         return (
           <div style={{ display: "flex", alignItems: "center" }}>
 
             <Tooltip title="Kopiuj">
-              <IconButton onClick={handleCopy} size="small">
+              <IconButton onClick={()=>handleCopy(params.row.url)} size="small">
                 <ContentCopyIcon fontSize="small" />
               </IconButton>
             </Tooltip>
