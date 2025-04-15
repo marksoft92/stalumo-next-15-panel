@@ -81,7 +81,7 @@ export default function GalleryPage() {
       field: "url-name",
       width: 300,
       renderCell: (params) => {
-        const handleCopy = (url) => {
+        const handleCopy = (url:string) => {
           navigator.clipboard?.writeText(url);
         };
 
