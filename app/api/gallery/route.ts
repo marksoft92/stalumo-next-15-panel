@@ -165,7 +165,7 @@ export async function POST(req: NextRequest) {
     // Tworzymy rekord w bazie danych
     const image = await prisma.image.create({
       data: {
-        url: `http://panel.stalumo.pl/image-public-uploads/${filename}`,
+        url: `https://panel.stalumo.pl/image-public-uploads/${filename}`,
         alt,
       },
     });
