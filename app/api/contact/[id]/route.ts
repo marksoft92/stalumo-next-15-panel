@@ -20,7 +20,6 @@ export async function GET(req: NextRequest, { params }: { params: any }) {
     if (!chat) {
       return NextResponse.json({ error: "Chat not found" }, { status: 404 });
     }
-
     // Zwrócenie danych
     return NextResponse.json(chat, { status: 200 });
   } catch (error) {
@@ -34,7 +33,7 @@ export async function POST(req: NextRequest, { params }: { params: any }) {
 
   try {
     // Pobieramy dane z body
-    const { read_me, reply,email,subject } = await req.json();
+    const { read_me, reply,email,subject,content } = await req.json();
 
     if (read_me) {
       // Aktualizujemy read_me na true
@@ -45,7 +44,7 @@ export async function POST(req: NextRequest, { params }: { params: any }) {
     }
 
     if (reply) {
-      const mailBody = mailContent(email,subject, reply);
+      const mailBody = mailContent(email,subject, reply,content);
 
 
       // Konfiguracja SMTP
@@ -64,7 +63,7 @@ export async function POST(req: NextRequest, { params }: { params: any }) {
       await transporter.sendMail({
         from: process.env.SMTP_USER,
         to: email,
-        subject: "Odpowiedź na wiadomość",
+        subject: subject,
         text: reply,
         html: mailBody,
       });

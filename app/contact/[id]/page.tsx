@@ -39,6 +39,7 @@ export default function ContactForm() {
         reply: reply,
         email: chatData.email,
         subject: chatData.topic,
+        content: chatData.content
       });
 
       if (response.status === 200) {

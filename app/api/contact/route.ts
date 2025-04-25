@@ -19,14 +19,13 @@ export async function GET(req: NextRequest) {
         createdAt: "desc",
       },
     });
-
+    const total = await prisma.clientChat.count();
     // If no chats found
     if (chats.length === 0) {
-      return new NextResponse(JSON.stringify({ error: "No chats found" }), {
-        status: 404,
-      });
+
+      return new NextResponse(JSON.stringify({ chats,total}), { status: 200 });
     }
-    const total = await prisma.clientChat.count();
+
 
     return new NextResponse(JSON.stringify({ chats,total }), { status: 200 });
   } catch (error) {
